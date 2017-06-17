@@ -21,11 +21,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="{{ "assets/reveal.js/css/reveal.css" | prepend: site.baseurl }}"/>
+    <link rel="stylesheet" href="{{ "/assets/reveal.js/css/reveal.css" | prepend: site.baseurl }}"/>
     {% if page.theme %}
-      <link rel="stylesheet" href="{{ "assets/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
+      <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
     {% else %}
-      <link rel="stylesheet" href="{{ "assets/reveal.js/css/theme/white.css" | prepend: site.baseurl }}" id="theme"/>
+      <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/white.css" | prepend: site.baseurl }}" id="theme"/>
     {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}assets/css/syntax.css">
 
@@ -34,7 +34,7 @@
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ "assets/reveal.js/css/print/pdf.css" | prepend: site.baseurl }}' : '{{ "assets/reveal.js/css/print/paper.css" | prepend: site.baseurl }}';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ "/assets/reveal.js/css/print/pdf.css" | prepend: site.baseurl }}' : '{{ "/assets/reveal.js/css/print/paper.css" | prepend: site.baseurl }}';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
@@ -118,11 +118,11 @@
       </div>
     </div>
 
-    <script src="{{ "assets/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "assets/reveal.js/jsassets/reveal.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
     <script>
       // Full list of configuration options available at:
-      // https://github.com/hakimelassets/reveal.js#configuration
+      // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
         progress: true,
@@ -136,9 +136,9 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: '{{ "assets/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
-          { src: '{{ "assets/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
-          { src: '{{ "assets/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true }
+          { src: '{{ "/assets/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
+          { src: '{{ "/assets/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
+          { src: '{{ "/assets/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true }
         ]
       });
 
