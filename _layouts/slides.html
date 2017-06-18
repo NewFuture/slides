@@ -8,7 +8,7 @@ layout: compress
 
     <title>
       {% if page.title %}
-        {{ page.title }} | {{ site.title }}
+        {{ page.title }}
       {% else %}
         {{ site.title }}
       {% endif %}
@@ -21,40 +21,28 @@ layout: compress
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="{{ "/assets/reveal.js/css/reveal.css" | prepend: site.baseurl }}"/>
+    <link rel="stylesheet" href="{{ "css/reveal.min.css" | prepend: site.reveal.cdn }}"/>
     {% if page.theme %}
-      <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
+      <link rel="stylesheet" href="{{ "css/theme/" | prepend: site.reveal.cdn | append: page.theme | append: '.min.css' }}" id="theme"/>
     {% else %}
-      <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
+      <link rel="stylesheet" href="{{ "css/theme/black.min.css" | prepend: site.reveal.cdn }}" id="theme"/>
     {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ "/assets/reveal.js/css/print/pdf.css" | prepend: site.baseurl }}' : '{{ "/assets/reveal.js/css/print/paper.css" | prepend: site.baseurl }}';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-
-    <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}" />
+    
+    <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>    
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
+    <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
   </head>
 
   <body>
 
     {% assign page_slides = content | split: site.reveal.slide_separator %}
 
-    <div class="reveal">
+    <main class="reveal">
       <div class="slides">
 
         {% if content contains site.reveal.slide_separator %}
@@ -119,26 +107,20 @@ layout: compress
         {% endif %}
 
       </div>
-    </div>
+    </main>
 
-    <script src="{{ "/assets/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/assets/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>
     <script>
       Reveal.initialize({
         controls: true,
         progress: true,
         history: true,
         center: true,
-        {% if page.transition %}
-          transition: '{{ page.transition }}',
-        {% else %}
-          transition: 'slide', 
-        {% endif %}
-
+        transition: '{{ page.transition | default: "slide" }}', 
         dependencies: [
-          { src: '{{ "/assets/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
-          { src: '{{ "/assets/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
-          { src: '{{ "/assets/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true }
+          { src: '{{ "lib/js/classList.min.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
+          { src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },
+          { src: '{{ "plugin/notes/notes.min.js" | prepend: site.reveal.cdn }}', async: true }
         ]
       });
 
