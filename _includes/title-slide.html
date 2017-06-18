@@ -1,7 +1,11 @@
+ {% assign page_url = site.url | append: page.url %}
 <section>
   <h1>{{ page.title }}</h1>
-  <small><a href="{{ page.url }}">{{ site.url | remove: "http://" }}{{ page.url }}</a></small>
+    <div>
+      <img data-src="https://api.qrserver.com/v1/create-qr-code/?data={{page_url}}" alt="{{ page.title }}"/>
+    </div>
   {% if page.description %}
     <p>{{ page.description }}</p>
   {% endif %}
+  <small><a href="{{ page_url }}">{{ page_url | remove: "http://" | remove: "https://" }}</a></small>
 </section>

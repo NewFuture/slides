@@ -6,11 +6,7 @@ layout: compress
 <head>
   <meta charset="utf-8"/>
 
-  {% if page.alias %}
-    <title>{{ page.alias }} | {{ page.title | default: site.title | capitalize }}</title>
-  {% else %}
-    <title>{{ page.title | default: site.title | capitalize }}</title>  
-  {% endif %}
+  <title>{{ page.title }} | {{ page.permalink | default: page.url | remove: '/' | replace: '-',' ' | capitalize }}</title>
 
   {% if page.description %}
   <meta name="description" content="{{ page.description }}"/>

@@ -1,5 +1,5 @@
 ---
-alias: 前端简史
+title: 前端简史
 lang: zh
 transition: slide
 theme: black
