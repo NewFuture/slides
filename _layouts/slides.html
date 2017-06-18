@@ -2,37 +2,29 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8"/>
 
-    <title>
-      {% if page.title %}
-        {{ page.title }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </title>
+  <title>{{ page.title | default: site.title }}</title>
 
-    <!-- Description -->
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}" />
-    {% endif %}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}"/>
+  {% endif %}
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/css/syntax.css" rel="stylesheet">
+  <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
 
-    <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/assets/css/syntax.css" rel="stylesheet">
-    <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
-
-    <!--
+  <!--
       <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
     -->
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  </head>
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+</head>
 
   <body>
 
