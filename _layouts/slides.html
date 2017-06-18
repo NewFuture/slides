@@ -23,9 +23,9 @@ layout: compress
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="{{ "css/reveal.min.css" | prepend: site.reveal.cdn }}"/>
+    <link rel="stylesheet" href="{{ site.reveal.cdn }}css/reveal.min.css"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
-    <link rel="stylesheet" href='{{ page.theme | default: "black" | append: ".min.css" | prepend: site.reveal.cdn + "css/theme/"}}' id="theme"/>
+    <link rel="stylesheet" href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme"/>
 
     <!--
       <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
