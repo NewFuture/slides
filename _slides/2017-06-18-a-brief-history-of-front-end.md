@@ -14,3 +14,8 @@ theme: black
 4. 前端脚手架 (Jquery Bootstrap等)
 5. 前端渲染 (Angular Vue等)
 6. ...
+
+---
+
+## 纯静态页面
+HTML 
