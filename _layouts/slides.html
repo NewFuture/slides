@@ -23,16 +23,15 @@ layout: compress
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="{{ "css/reveal.min.css" | prepend: site.reveal.cdn }}"/>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
-    <link rel="stylesheet" href='{{ page.theme | default: "black" | append: ".min.css" | prepend: site.reveal.cdn + "css/theme/"}}' id="theme"/>
+    <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/syntax.css" rel="stylesheet">
+    <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
 
     <!--
       <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
     -->
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
   </head>
 
   <body>
@@ -105,8 +104,8 @@ layout: compress
 
       </div>
     </main>
-
-    <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>
+    <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
+    <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>    
     <script>
       Reveal.initialize({
         controls: true,
@@ -115,12 +114,11 @@ layout: compress
         center: true,
         transition: '{{ page.transition | default: "slide" }}', 
         dependencies: [
-          { src: '{{ "lib/js/classList.min.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
+          { src: '{{ "lib/js/classList.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
           { src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },
           { src: '{{ "plugin/notes/notes.min.js" | prepend: site.reveal.cdn }}', async: true }
         ]
       });
-
     </script>
 
   </body>
