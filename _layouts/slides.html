@@ -20,9 +20,9 @@ layout: compress
   <link href="{{ site.baseurl }}/assets/css/syntax.css" rel="stylesheet">
   <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
 
-  <!--
-      <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
-    -->
+{% comment %}
+  <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
+{% endcomment %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 </head>
 
@@ -82,9 +82,7 @@ layout: compress
                 </aside>
 
               {% else %}
-
                 {{ slide }}
-
               {% endif %}
             {% endif %}
 
@@ -108,7 +106,7 @@ layout: compress
         dependencies: [
           { src: '{{ "lib/js/classList.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
           { src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },
-          { src: '{{ "assets/js/notes.plugin.js" | prepend: site.url }}', async: true }
+          { src: '{{ "/assets/js/notes.plugin.min.js" | prepend: site.baseurl }}', async: true }
         ]
       });
     </script>
