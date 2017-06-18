@@ -108,7 +108,7 @@ layout: compress
         dependencies: [
           { src: '{{ "lib/js/classList.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
           { src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },
-          { src: '{{ "plugin/notes/notes.min.js" | prepend: site.reveal.cdn }}', async: true }
+          { src: '{{ "assets/js/notes.plugin.js" | prepend: site.url }}', async: true }
         ]
       });
     </script>

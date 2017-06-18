@@ -1,15 +1,9 @@
 ---
 title: 前端简史
+description: A Brief History of the Front End
 lang: zh
 transition: slide
 theme: black
----
-
-# 前端简史
-
-## A Brief History of the Front End
-
-
 ---
 
 ## 目录
