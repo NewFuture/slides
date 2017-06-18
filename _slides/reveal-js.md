@@ -1,6 +1,9 @@
 ---
 title: reveal.js
 description: The HTML presentation framework
+lang: en
+transition: slide
+permalink:  hello-word/
 theme: black
 ---
 
