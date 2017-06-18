@@ -13,7 +13,7 @@ reveal:
 title:                Slides of New Future
 tagline:              "Markdown slides in Jekyll using reveal.js"
 description:          "Slides of New Future"
-url:                  https://newfuture.github.io/slides
+url:                  https://newfuture.github.io/slides/
 
 markdown:             kramdown
 kramdown:
