@@ -24,15 +24,12 @@ layout: compress
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="{{ "css/reveal.min.css" | prepend: site.reveal.cdn }}"/>
-    {% if page.theme %}
-      <link rel="stylesheet" href="{{ "css/theme/" | prepend: site.reveal.cdn | append: page.theme | append: '.min.css' }}" id="theme"/>
-    {% else %}
-      <link rel="stylesheet" href="{{ "css/theme/black.min.css" | prepend: site.reveal.cdn }}" id="theme"/>
-    {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+    <link rel="stylesheet" href='{{ page.theme | default: "black" | append: ".min.css" | prepend: site.reveal.cdn + "css/theme/"}}' id="theme"/>
 
-    
-    <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>    
+    <!--
+      <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
+    -->
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
