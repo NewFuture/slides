@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +28,7 @@
     {% if page.theme %}
       <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
     {% else %}
-      <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/white.css" | prepend: site.baseurl }}" id="theme"/>
+      <link rel="stylesheet" href="{{ "/assets/reveal.js/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
     {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
 
@@ -121,8 +124,6 @@
     <script src="{{ "/assets/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
     <script>
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
         progress: true,
@@ -131,10 +132,9 @@
         {% if page.transition %}
           transition: '{{ page.transition }}',
         {% else %}
-          transition: 'slide', // none/fade/slide/convex/concave/zoom
+          transition: 'slide', 
         {% endif %}
 
-        // Optional reveal.js plugins
         dependencies: [
           { src: '{{ "/assets/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
           { src: '{{ "/assets/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
