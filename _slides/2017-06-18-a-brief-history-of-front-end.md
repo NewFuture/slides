@@ -9,8 +9,8 @@ theme: black
 ## 目录
 
 1. 第一阶段：静态页面 [起步]
-2. 第二阶段：动态页面 [发展]
-3. 第三阶段：前后端数据交互 (XMLHttpRequest)
+2. 第二阶段：动态页面 [发展1]
+3. 第三阶段：前后端数据交互 [发展2]
 4. 第四阶段：统一标准化 (jQuery等前端插件)
 5. 第五阶段：前端渲染 (Angular Vue等框架)
 6. 下一阶段：输入和交互 (设备接口和Hybird APP)
@@ -93,3 +93,36 @@ Notes:
 解决问题: 
 * 内容与样式**分离**
 * 样式设计结构化和统一管理
+
+1993年开始讨论设计定义样式的方案
+[PWP一种类似SASS的设计方案](http://1997.webhistory.org/www.lists/www-talk.1993q4/0264.html)
+```
+(BODY fontSize=normal
+	  BGColor=white
+	  FGColor=black
+  (H1   fontSize=largest
+	    BGColor=red
+	    FGColor=white)
+)
+```
+
+
+~~
+
+1991网站出现 - 1996 CSS诞生 - 2000得到浏览器完整支持
+
+
+* css1.0 基本样式
+* ccs2.0 丰富选择器
+* css3.0 特效和响应式
+
+----
+
+## 第三阶段——前后端数据交互
+
+* XMLHttpRequest
+* ~~Flash~~ 
+* ~~Silverlight~~
+
+ 
+
