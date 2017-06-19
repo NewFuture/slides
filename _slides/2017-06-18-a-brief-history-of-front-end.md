@@ -27,7 +27,8 @@ HTML (Hyper Text Mark-up Language)
 
 
 
-解决主要问题: {: .fragment}
+解决主要问题: 
+{: .fragment}
 
 * 统一的文档格式
 * 超链接
@@ -43,7 +44,7 @@ HTML (Hyper Text Mark-up Language)
 ```html
 <html>
 <body>
-    hello <a href="http://info.cern.ch">world </a>!
+    hello <a href="http://info.cern.ch">world</a> !
 </body>
 </html>
 ```
@@ -74,9 +75,9 @@ Notes:
 ```php
 <html>
 <body>
-    <CENTER>
-      <font size="3" color="<?php echo 'red'?>"><?php echo 'hello'?></font>
-    </CENTER>
+  <CENTER>
+    <font color="<?php echo 'red'?>"><?php echo 'hello'?></font>
+  </CENTER>
 </body>
 </html>
 ```
