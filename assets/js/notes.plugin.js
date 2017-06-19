@@ -14,7 +14,7 @@
 var RevealNotes = (function() {
 
 	function openNotes( notesFilePath ) {
-        notesFilePath = notesFilePath || "{{site.url}}notes.html";
+        notesFilePath = notesFilePath || "{{site.url}}/notes.html";
 
 		var notesPopup = window.open( notesFilePath, 'reveal.js - Notes', 'width=1100,height=700' );
 

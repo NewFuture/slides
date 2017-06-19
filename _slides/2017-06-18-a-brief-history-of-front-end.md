@@ -25,14 +25,12 @@ HTML (Hyper Text Mark-up Language)
 
 伴随 www 诞生，网络核心开始由 `FTP` 转向 `HTTP`
 
-<p class="fragment grow">
+
 
 解决主要问题:
-
 * 统一的文档格式
 * 超链接
-
-</p>
+{: .fragment}
 
 ~~
 
@@ -42,7 +40,7 @@ HTML (Hyper Text Mark-up Language)
 ```html
 <html>
 <body>
-    hello <a  href="http://info.cern.ch">world </a>!
+    hello <a href="http://info.cern.ch">world </a>!
 </body>
 </html>
 ```
