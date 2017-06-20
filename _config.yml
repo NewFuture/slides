@@ -8,6 +8,7 @@ reveal:
   notes_separator:    "<p>Notes:</p>"
   title_slide:        true
   cdn:               "https://cdn.bootcss.com/reveal.js/3.5.0/"
+  qrcode:            "https://pan.baidu.com/share/qrcode?w=300&h=300&url="
 
 # Setup
 title:                Slides of New Future
