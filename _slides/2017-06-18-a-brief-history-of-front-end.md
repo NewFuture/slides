@@ -28,7 +28,7 @@ HTML (Hyper Text Mark-up Language)
 
 
 解决主要问题: 
-{: .fragment}
+{: .fragment .left}
 
 * 统一的文档格式
 * 超链接
@@ -109,7 +109,7 @@ Notes:
 
 ~~
 
-1991网站出现 - 1996 CSS诞生 - 2000得到浏览器完整支持
+1991网站出现 - 1996 CSS诞生 - 2000浏览器完整支持
 
 
 * css1.0 基本样式
@@ -120,9 +120,13 @@ Notes:
 
 ## 第三阶段——前后端数据交互
 
-* XMLHttpRequest
+* XMLHttpRequest (1999 IE5)
 * ~~Flash~~ 
 * ~~Silverlight~~
 
- 
 
+每一次
+
+~~
+
+# AJAX

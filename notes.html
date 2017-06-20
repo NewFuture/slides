@@ -46,7 +46,9 @@ permalink: notes.html
         <span class="speaker-layout-label"></span>
         <select class="speaker-layout-dropdown"></select>
     </div>
-    <script src="{{site.reveal.cdn}}/plugin/markdown/marked.js"></script>
-    <script src="assets/js/notes.control.js"></script>
+    <!--<script src="{{site.reveal.cdn}}/plugin/markdown/marked.js"></script>-->
+    <script>
+    {% include_relative assets/js/notes.control.js %}
+    </script>
 </body>
 </html>
