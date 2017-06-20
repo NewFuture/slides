@@ -1,5 +1,8 @@
-# Permalinks
-permalink:            pretty
+# Setup
+title:                "Future Slides"
+tagline:              "未来的幻灯片集"
+description:          "Slides collection of <a href='http://github.newfuture.cc'>New Future</a>"
+url:                  "http://slides.newfuture.cc"
 
 # reveal options
 reveal:
@@ -10,11 +13,6 @@ reveal:
   cdn:               "https://cdn.bootcss.com/reveal.js/3.5.0/"
   qrcode:            "https://pan.baidu.com/share/qrcode?w=200&h=200&url="
 
-# Setup
-title:                Slides of New Future
-tagline:              "Markdown slides in Jekyll using reveal.js"
-description:          "Slides of New Future"
-url:                  http://slides.newfuture.cc
 
 markdown:             kramdown
 kramdown:
