@@ -121,10 +121,11 @@ Notes:
 
 ## 第三阶段——前后端数据交互
 
+Web2.0 的开端
+
 * XMLHttpRequest (1999 IE5)
 * ~~Flash~~ (1996-2015)
 
-Web2.0 的开端
 
 ~~
 
@@ -134,19 +135,18 @@ Asynchronous JavaScript and XML
 
 解决问题: 前后端数据交互,无需**刷新**页面
 
-2005 提出AJAX概率,已经开始使用和流行
-
-2006 XMLHttpRequest 纳入W3C标准
+* 2005 提出AJAX概率,已经开始使用和流行
+* 2006 XMLHttpRequest 纳入W3C标准
 
 --------------------------------
 
 ## WebSocket
-
-2011 WebSocket 协议纳入RFC标准
-
-2015 HTML5 定稿 (确定WebSocket API)
-
 解决问题: 实现后端和前端**双向**通信
+
+
+* 2011 WebSocket 协议纳入RFC标准
+* 2015 HTML5 定稿 (确定WebSocket API)
+
 
 
 --------------------------------
@@ -156,7 +156,7 @@ Asynchronous JavaScript and XML
 * 浏览器兼容问题
 * 接口操作繁琐
 
-推荐网站：<https://CanIuse.com>
+推荐网站：[CanIuse.com](https://caniuse.com)
 
 
 ~~
