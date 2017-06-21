@@ -11,8 +11,8 @@ theme: black
 1. 第一阶段：静态页面 [起步]
 2. 第二阶段：动态页面 [发展上]
 3. 第三阶段：前后端交互 [发展下]
-4. 第四阶段：混乱和统一 [标准化]
-5. 第五阶段：前端渲染 (Angular Vue等框架)
+4. 第四阶段：混乱和统一 [统一]
+5. 第五阶段：前端渲染 [繁荣]
 6. 下一阶段：输入和交互 (设备接口和Hybird APP)
 
 --------------------------------
@@ -138,7 +138,7 @@ Asynchronous JavaScript and XML
 * 2005 提出AJAX概率,已经开始使用和流行
 * 2006 XMLHttpRequest 纳入W3C标准
 
---------------------------------
+~~
 
 ## WebSocket
 解决问题: 实现后端和前端**双向**通信
@@ -172,7 +172,37 @@ Asynchronous JavaScript and XML
 
 ## Jquery
 
+使用量最高的JS库
+
+重新定义JS操作DOM的接口,兼容浏览器差异
+
+~~
+
+![](https://w3techs.com/diagram/history_overview/javascript_library/all/m)
+
+2006年发布
+
+
+前端开始进入第一波造轮子时代(插件)
 
 ~~
 
 ## Bootstrap
+
+GitHub上star最多的项目(超第二名两倍)
+
+响应式前端UI框架,兼容各厂商和平台的浏览器
+
+
+--------------------------------
+
+## 
+
+
+## 前端框架
+
+* Angular (2009, 2014, Google)
+* ~~Backbone.js (2010, Ashkenas)~~
+* React (2011, 2013, Facebook)
+* Vue.js (2014, 尤雨溪)
+
