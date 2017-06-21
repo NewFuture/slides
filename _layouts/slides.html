@@ -105,8 +105,12 @@ layout: compress
         transition: '{{ page.transition | default: "slide" }}', 
         dependencies: [
           { src: '{{ "lib/js/classList.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
-          { src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },
-          { src: '{{ "/assets/js/notes.plugin.min.js" | prepend: site.baseurl }}', async: true }
+          /*{ src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },*/
+          { 
+            src: '{{ "/assets/js/notes.plugin.min.js" | prepend: site.baseurl }}',
+            condition: function() { return head.desktop},            
+            async: true,
+          }
         ]
       });
     </script>
