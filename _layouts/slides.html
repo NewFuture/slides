@@ -98,6 +98,8 @@ layout: compress
     <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>    
     <script>
       Reveal.initialize({
+        {% if page.height %} height: {{ page.height }}, {% endif %}
+        {% if page.width %} width: {{ page.width }}, {% endif %}
         controls: true,
         progress: true,
         history: true,

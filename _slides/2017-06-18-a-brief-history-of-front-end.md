@@ -4,6 +4,8 @@ description: A Brief History of the Front End
 lang: zh
 transition: slide
 theme: black
+width: 1280
+height: 720
 ---
 
 ## 目录
