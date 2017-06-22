@@ -50,3 +50,6 @@ compress_html:
 sass:
   style: compressed
   sass_dir: _sass
+
+gems:
+  - remote-include
