@@ -13,13 +13,13 @@ height: 720
 1. 第一阶段：静态页面 [起步]
 2. 第二阶段：动态页面 [发展上]
 3. 第三阶段：前后端交互 [发展下]
-4. 第四阶段：混乱和统一 [统一]
+4. 第四阶段：混乱和兼容 [统一]
 5. 第五阶段：前端渲染 [爆发]
 6. 下一阶段：原生交互 [设备]
 
 --------------------------------
 
-## 第一阶段——纯静态起源 
+## 第一阶段——静态页面 
 
 HTML (Hyper Text Mark-up Language)
 
@@ -27,19 +27,18 @@ HTML (Hyper Text Mark-up Language)
 
 伴随 www 诞生，网络核心开始由 `FTP` 转向 `HTTP`
 
+HTTP协议随之发布(只能`GET`,`文本数据`)
 
+~~
 
-解决问题: 
-{: .fragment .left}
+HTML所解决问题: 
 
 * 统一的文档格式
 * 超链接
-{: .fragment}
 
 ~~
 
 最初的HTML是纯静态文档
-
 
 和FTP上共享的文件一样
 
@@ -53,6 +52,7 @@ HTML (Hyper Text Mark-up Language)
 
 此URL记录了第一个网站
 
+
 Notes:
 
 创建者 Tim Berners-Lee 的遗憾就是http协议后面的那两道斜杠
@@ -64,11 +64,16 @@ Notes:
 
 随着图形化浏览器的出现和Web的流行，
 
-解决问题: **页面重用**,模板化
+对于页面重用和增加交互的需求越来越大
 
 * 1994年PHP诞生, 嵌套的后端html模板开始流行
 * 1994年JavaScript诞生，页面可运行脚本验证
 
+~~
+
+解决问题: 
+ - **页面重用** 和 模板化
+ - 数据可交互 包括前端页面，和后端
 
 ~~
 
@@ -85,7 +90,7 @@ Notes:
 ```
 
 * 后端 ASP, JSP, Ruby,Python 等
-* 前端除JavaScript 还有微软 `VBScript` 和 `JScript`等
+* 前端除JavaScript 还有微软 `JScript`(后发展为IE上的JS)和`VBScript`等
 
 
 ~~
@@ -93,11 +98,14 @@ Notes:
 ## CSS 诞生
 
 解决问题: 
-{: .left}
 * 内容与样式**分离**
 * 样式设计结构化和统一管理
 
+
+~~
+
 1993年开始讨论设计定义样式的方案
+
 [PWP一种类似SASS的设计方案](http://1997.webhistory.org/www.lists/www-talk.1993q4/0264.html)
 ```
 (BODY fontSize=normal
@@ -114,16 +122,16 @@ Notes:
 
 1991网站出现 - 1996 CSS诞生 - 2000浏览器完整支持
 
-
 * css1.0 基本样式
 * ccs2.0 丰富选择器
 * css3.0 特效和响应式
+
 
 --------------------------------
 
 ## 第三阶段——前后端数据交互
 
-Web2.0 的开端
+前端可以发送HTTP请求直接与后端交互，Web2.0 的开端
 
 * XMLHttpRequest (1999 IE5)
 * ~~Flash~~ (1996-2015)
@@ -150,16 +158,21 @@ Asynchronous JavaScript and XML
 * 2015 HTML5 定稿 (确定WebSocket API)
 
 
-
 --------------------------------
 
-## 第四阶段——混乱和统一
+## 第四阶段——混乱和兼容
+
+随着各大厂商浏览器发展，和标准发布的滞后，一个新的问题
 
 * 浏览器兼容问题
-* 接口操作繁琐
+* 原生JS接口操作繁琐，不同版本差异大
 
-推荐网站：[CanIuse.com](https://caniuse.com)
 
+~~
+
+[CanIuse.com](https://caniuse.com)可查询浏览器兼容
+
+![](/assets/img/caniuse.png)
 
 ~~
 
@@ -168,7 +181,6 @@ Asynchronous JavaScript and XML
 * 请用IE打开
 * 请使用IE9及以上版本访问**本站**
 * 不兼容IE浏览器
-{: .fragment}
 
 ~~
 
@@ -200,7 +212,8 @@ GitHub上star最多的项目(超第二名两倍)
 
 ## 第五阶段：前端渲染 [爆发]
 
-2009年NodeJS发布带来**npm**,前端走向模块化
+2009年NodeJS发布带来**npm**,前端走向模块化和工程化
+
 随前端路由和渲染数据的成熟,前端框架开始出现流行
 
 ~~
