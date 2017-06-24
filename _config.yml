@@ -11,7 +11,7 @@ reveal:
   notes_separator:    "<p>Notes:</p>"
   title_slide:        true
   cdn:               "https://cdn.bootcss.com/reveal.js/3.5.0/"
-  qrcode:            "http://qr.topscan.com/api.php?w=200&m=10&logo=http://slides.newfuture.cc/assets/icon/avatar.min.jpg&text="  
+  # qrcode:            "http://qr.topscan.com/api.php?w=200&m=10&logo=http://slides.newfuture.cc/assets/icon/avatar.min.jpg&text="  
   qrcode:            "https://pan.baidu.com/share/qrcode?w=200&h=200&url="
 
 
