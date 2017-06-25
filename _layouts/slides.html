@@ -100,7 +100,7 @@ layout: compress
       Reveal.initialize({
         {% if page.height %} height: {{ page.height }}, {% endif %}
         {% if page.width %} width: {{ page.width }}, {% endif %}
-        loop: {{ page.loop | default: "true" }},        
+        loop: {{ page.loop | default: "false" }},        
         controls: true,
         progress: true,
         history: true,
