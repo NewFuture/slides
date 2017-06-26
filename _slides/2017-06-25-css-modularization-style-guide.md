@@ -149,13 +149,9 @@ h1{}
 
 ### 模块化原则
 
-### 模块封装原则
-*
-* 
-
-### CSS设计原则
-* 不影响周围布局
-* 不充分(DRY：Don't Repeat Yourself)
+* 什么内容需要模块化封装?
+* 如何封装?
+* 如何实现样式？
 
 ~~
 
@@ -166,6 +162,13 @@ h1{}
 
 如 `reset.css`, 图标库等
 
+
+-----------
+
+### 基本封装原则
+
+* 只暴露一个类名
+* 复用原则
 
 
 ~~
@@ -191,8 +194,8 @@ h1{}
 
 > 尽可能的拆成可**独立复用**组件
 
-坏栗子
 ```css
+/*坏栗子*/
 .error-massage{
   display:block;
   padding:10px;
@@ -240,6 +243,33 @@ h1{}
 }
 ```
 
+
+-----
+### 样式实现原则
+同样的效果可以有多种实现方案
+
+* 一个规则(DRY：Don't Repeat Yourself)
+* 不影响周围布局
+
+
+~~
+
+### 一个规则(DRY)
+
+```css
+selector{
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+```
+```css
+selector{
+    border:1px solid #eee;
+    border-right:none;
+}
+```
+
 --------------------
 
 ## CSS命名原则和规范
@@ -248,7 +278,9 @@ h1{}
 * 基于视觉: 比较广泛的基础属性 `.nowrap, .flex`
 * 基于内容: 限局部样式使用 `.user-info, .avatar`
 
-### 命令规范
+~~
+
+### 命名规范
 
 * 避免无意义
 * 避免冲突 (顶层命名避免过于通用)
