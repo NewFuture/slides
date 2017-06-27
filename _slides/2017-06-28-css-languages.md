@@ -178,8 +178,11 @@ div {
 [lesscss.org](http://lesscss.org/)
 
 JS 实现的 CSS 预处理器
+
 ![less](http://lesscss.org/public/img/logo.png)
+
 LESS,a CSS pre-processor, extends CSS 
+
 ~~
 ### LESS 基本用法
 

@@ -106,6 +106,7 @@ layout: compress
         history: true,
         center: true,
         touch: true,
+        slideNumber: 'c/t',
         transition: '{{ page.transition | default: "slide" }}', 
         dependencies: [
           { src: '{{ "lib/js/classList.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
