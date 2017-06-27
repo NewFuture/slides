@@ -13,6 +13,8 @@ theme: black
 * Stylus
 * 对比总结
 
+-----------------
+
 ## 为什么需要预处理语言?
 
 CSS 不是**编程**语言
@@ -31,11 +33,19 @@ CSS 不是**编程**语言
 
 --------------------
 
-## SASS & SCSS
+## SASS
 
 [sass-lang.com](http://sass-lang.com/)
 
 Ruby 实现的CSS预处理器
+
+![](http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg)
+
+最成熟、最稳定、最强大的CSS扩展语言
+
+~~
+
+### SASS 与 SCSS
 
 SASS 依靠缩进控制
 ```sass
@@ -44,7 +54,6 @@ SASS 依靠缩进控制
 ```
 
 SCSS 和 SASS 语法一致，写法靠近css
-
 ```scss
 .box {
   display: block;
@@ -93,7 +102,7 @@ $side : left;
 }
 ```
 
-**SCSS变量无作用域**
+SCSS变量3.4.21之后才有**作用域**
 
 ~~
 #### SCSS(SASS)计算与条件控制
@@ -166,11 +175,11 @@ div {
 --------------------------------------
 
 ## LESS
+[lesscss.org](http://lesscss.org/)
 
-LESS extends CSS: [lesscss.org](http://lesscss.org/)
-
-CSS 超集合
-
+JS 实现的 CSS 预处理器
+![less](http://lesscss.org/public/img/logo.png)
+LESS,a CSS pre-processor, extends CSS 
 ~~
 ### LESS 基本用法
 
@@ -279,11 +288,13 @@ div {
 
 ## stylus
 
-EXPRESSIVE, DYNAMIC, ROBUST CSS
-
 [stylus-lang.com](http://stylus-lang.com/)
 
-JS实现的最像脚本语言的CSS预处理语言
+EXPRESSIVE, DYNAMIC, ROBUST CSS
+
+![](http://stylus-lang.com/img/stylus-logo.svg)
+
+Node.JS实现的最像脚本语言的CSS预处理语言
 
 ~~
 ### Stylus 书写方式
@@ -406,7 +417,7 @@ body
 | 阅读性 |   高   |   高  |    底    | 
 | 灵活性 |   中   |  低   |   一般   | 
 | Mixin库 | 多    |  中   |    少    | 
-| 上手难道 |  中  |  低    |   高    | 
+| 难度 |  中  |  低    |   高    | 
 
 ~~
 
