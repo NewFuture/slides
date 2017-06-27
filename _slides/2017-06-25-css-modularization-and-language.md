@@ -1,6 +1,6 @@
 ---
 title: CSS模块化&语言
-description: CSS Modularization and Style Guide
+description: CSS Modularization and Language
 lang: zh
 transition: slide
 theme: black
@@ -8,9 +8,9 @@ theme: black
 #height: 720
 ---
 
-## 目录
+## 内容提要
 
-* CSS 使用情景
+* CSS 使用方式
 * CSS 模块化介绍
 * CSS 模块化原则
 * CSS 预处理语言
@@ -172,7 +172,7 @@ h1{}
 
 ~~
 
-###  只暴露一个类名
+####  只暴露一个类名
 
 导航封装的好栗子
 ```css
@@ -189,7 +189,7 @@ h1{}
 ```
 
 ~~
-### 复用原则
+#### 复用原则
 
 > 尽可能的拆成可**独立复用**组件
 
@@ -243,35 +243,11 @@ h1{}
 ```
 
 
------
-### 样式实现原则
-同样的效果可以有多种实现方案
 
-* 一个规则(DRY：Don't Repeat Yourself)
-* 不影响周围布局
-
-
-~~
-
-### 一个规则(DRY)
-
-```css
-selector{
-    border-top:1px solid #eee;
-    border-left:1px solid #eee;
-    border-bottom:1px solid #eee;
-}
-```
-```css
-selector{
-    border:1px solid #eee;
-    border-right:none;
-}
-```
 
 --------------------
 
-## CSS命名原则和规范
+### CSS基本命名原则和规范
 
 * **基于功能**:  `.btn, .form`
 * 基于视觉: 比较广泛的基础属性 `.nowrap, .flex`
@@ -293,6 +269,8 @@ selector{
 ## CSS 预处理语言
 
 CSS 不是**编程**语言
+
+模块化和多样化很困难
 
 无法实现变量,条件函数等控制功能
 
