@@ -1,6 +1,6 @@
 ---
 title: CSS实践指南
-description: CSS style guide
+description: CSS Style Guide
 lang: zh
 transition: slide
 theme: black
