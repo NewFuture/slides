@@ -293,16 +293,140 @@ selector{
 
 ## CSS 预处理语言
 
+CSS 不是**编程**语言
+
+无法实现变量,条件函数等控制功能
 
 ~~
 ### SASS and SCSS
 
+SASS 依靠缩进控制
+```sass
+.box
+  display: block
+```
+
+SCSS 和 SASS 语法一致，写法靠近css
+
+```SCSS
+.box {
+  display: block;
+}
+```
+
+~~
+#### SCSS (SASS)基本语法
+
+```scss
+p {
+  color: blue;
+  border: { color: red;}
+  &:hover { color: green;}
+  span { color: black;}
+}
+```
+编译后
+```css
+p {
+  color: blue;
+  border-color: red;
+}
+p:hover {
+  color: green;
+}
+p span {
+  color: black;
+}
+```
+
+~~
+##### 变量
+```scss
+$mainColor: #963; //以$开头
+body {color: $mainColor};
+```
+```scss
+$side : left;
+.rounded {
+　border-#{$side}-radius: 5px; //字符使用#{}
+}
+```
+~~
+#####  SCSS(SASS)计算与条件控制
+
+```scss
+body {
+　　margin: (14px/2);
+　　top: 50px + 100px;
+　　right: $var * 10%;
+}
+```
+
+```scss
+.a{
+    @if lightness($color) > 30% {
+　　　　background-color: #000;
+　　} @else {
+　　　　background-color: #fff;
+　　}
+}
+$i: 6;
+@while $i > 0 {
+　.item-#{$i} { width: 2em * $i; }
+　$i: $i - 2;
+}
+```
+~~
+
+##### SCSS(SASS) Mixed与函数
+```scss
+@mixin border-radius($values: 0) {/* @mixin*/
+  -webkit-border-radius: $values;
+     -moz-border-radius: $values;
+          border-radius: $values;
+}
+div {
+  @include border-radius(10px);/* using mixed */
+}
+```
+```scss
+@function double($n) { /*function*/
+    @return $n * 2;
+}
+.sidebar {　width: double(5px);}
+```
 ~~
 ### LESS
 
 ~~
+
+函数
+```less
+.border-radius(@values) {
+  -webkit-border-radius: @values;
+     -moz-border-radius: @values;
+          border-radius: @values;
+} 
+div {
+  .border-radius(10px);
+}
+```
+
+~~
 ### stylus
 
+函数
+```stylus
+border-radius(values) {
+  -webkit-border-radius: values;
+     -moz-border-radius: values;
+          border-radius: values;
+}
+ 
+div {
+  border-radius(10px);
+}
+```
 
 
 ----------------------------------------------------------------
