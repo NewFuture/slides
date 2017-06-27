@@ -544,7 +544,8 @@ div {
 }
 ```
 
-~~
+-----------
+
 ### stylus
 
 EXPRESSIVE, DYNAMIC, ROBUST CSS
@@ -600,6 +601,7 @@ body
 '-webkit-gradient(%s, %s, %s)' % (linear (0 0) (0 100%))
 ```
 
+~~
 #### Stylus 运算 和 条件控制
 算术运算和逻辑运算几乎都支持，也支持三元操作符
 ```stylus
@@ -630,6 +632,7 @@ body
   @extends .message
   border-color: red
 ```
+除了`@extend`也支持`@block`
 ```stylus
 foo = @block {
   width: 20px
@@ -643,9 +646,9 @@ foo = @block {
 
 #### Stylus Mixin 和 函数
 * Stylus 有最为复杂和灵活的函数支持
-* Mixin和函数已经合并，唯一的区别是有无返回值
+* Mixin和函数合并，唯一的区别是有无返回值
 * 支持函数嵌套，匿名函数，函数指针等复杂用法
-* 可以使用变参函数，也可像python一样指定参数值
+* 可使变参函数，也可像python一样指定参数值
 
 ```stylus
 border-radius(values)
@@ -661,4 +664,25 @@ first-even(nums)
 body
   z-index first-even(1 3 5 5 6 3 2)
 ```
+
+--------------------
+
+## 预处理语言对比
+
+|  语言   |  SCSS  | LESS | Stylus  |
+|--------|:-------|:------:|:-------:|
+| CSS兼容 |  中   |  高   |   低     |
+| 阅读性 |   高   |   高  |    底    | 
+| 灵活性 |   中   |  低   |   一般   | 
+| Mixin库 | 多    |  中   |    少    | 
+| 上手难道 |  中  |  低    |   高    | 
+
+~~
+
+### 语言选型推荐
+
+* CSS: UI和原型设计者
+* **SCSS: 前端团队或者全栈团队**
+* LESS: 个人或前端团队(样式设计为主)
+* Stylus: 编程能力强的个人或者小团队
 
