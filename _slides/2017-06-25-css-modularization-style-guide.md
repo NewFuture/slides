@@ -297,8 +297,8 @@ CSS 不是**编程**语言
 
 无法实现变量,条件函数等控制功能
 
-~~
-### SASS and SCSS
+--------------------
+### SASS & SCSS
 
 SASS 依靠缩进控制
 ```sass
@@ -308,11 +308,12 @@ SASS 依靠缩进控制
 
 SCSS 和 SASS 语法一致，写法靠近css
 
-```SCSS
+```scss
 .box {
   display: block;
 }
 ```
+SCSS一般使用SASS的处理器进行编译
 
 ~~
 #### SCSS (SASS)基本语法
@@ -325,7 +326,7 @@ p {
   span { color: black;}
 }
 ```
-编译后
+编译后的css
 ```css
 p {
   color: blue;
@@ -348,7 +349,7 @@ body {color: $mainColor};
 ```scss
 $side : left;
 .rounded {
-　border-#{$side}-radius: 5px; //字符使用#{}
+  border-#{$side}-radius: 5px; //字符使用#{}
 }
 ```
 ~~
@@ -356,19 +357,19 @@ $side : left;
 
 ```scss
 body {
-　　margin: (14px/2);
-　　top: 50px + 100px;
-　　right: $var * 10%;
+  margin: (14px/2);
+  top: 50px + 100px;
+  right: $var * 10%;
 }
 ```
 
 ```scss
 .a{
     @if lightness($color) > 30% {
-　　　　background-color: #000;
-　　} @else {
-　　　　background-color: #fff;
-　　}
+    background-color: #000;
+  } @else {
+    background-color: #fff;
+  }
 }
 $i: 6;
 @while $i > 0 {
@@ -386,29 +387,63 @@ $i: 6;
           border-radius: $values;
 }
 div {
-  @include border-radius(10px);/* using mixed */
+  @include border-radius(10px);/* using mixin */
 }
 ```
 ```scss
 @function double($n) { /*function*/
     @return $n * 2;
 }
-.sidebar {　width: double(5px);}
+.sidebar { width: double(5px);}
 ```
-~~
+
+------
+
 ### LESS
 
-~~
+LESS extends CSS: [lesscss.org](http://lesscss.org/)
 
-函数
+~~
+#### LESS 基本语法
+LESS 和 SCSS 一样源自SASS
+
+~~
+#### LESS 变量
 ```less
-.border-radius(@values) {
+@mainColor: #963; //以@开头
+body {color: @mainColor};
+```
+
+```less
+@jack: "I am jack.";
+@var: 'jack';
+.msg{
+  content: @@var;  //编译结果: content: "I am jack.";
+}
+```
+~~
+#### LESS Mixins 和 函数
+```less
+.border-radius(@values: 1px) {
   -webkit-border-radius: @values;
      -moz-border-radius: @values;
           border-radius: @values;
 } 
 div {
   .border-radius(10px);
+}
+.m {
+    .border-radius;//默认参数
+}
+```
+不能单独定义函数 (可使用Mixins模拟)
+```less
+.average(@x, @y) {
+  @average: ((@x + @y) / 2);
+}
+div {
+  .average(16px, 50px); // "call" the mixin
+  padding: @average;    // use its "return" value
 }
 ```
 
