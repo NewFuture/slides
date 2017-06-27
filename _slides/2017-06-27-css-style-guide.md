@@ -1,14 +1,10 @@
 ---
 title: CSS实践指南
-description: CSS Style Guide
+description: CSS Style Guide for Team Work
 lang: zh
 transition: slide
 theme: black
-#width: 1280
-#height: 720
 ---
-
-
 
 ## 内容提要
 
@@ -16,13 +12,13 @@ theme: black
 * BEM 规范
 * SUIT 规范
 * SCSS + Emmet  
+* 一个栗子
 
 ----
 
 ## 样式实现原则
-同样的效果可以有多种实现方案
 
-* 一个规则(DRY：Don't Repeat Yourself)
+* DRY：Don't Repeat Yourself
 * 不影响周围布局
 * 嵌套层次
 
@@ -43,11 +39,30 @@ selector{
     border-right:none;
 }
 ```
-2. 重复内容使用函数和变量
+2. 重复内容使用函数和变量(预处理语言)
+
+~~
+
+### 
+
+~~
+### 嵌套层数
+
+两层到三层为佳
+
+* 单层容易冲突
+* 多层嵌套太深，增加解析成本
+
+-------------------------------
+## BEM 规范
 
 
-------------
+-------------------------------
+## SUIT 规范
 
+
+
+-------------------------------
 ### SCSS + Emmet
 
 ~~
@@ -58,3 +73,10 @@ selector{
 ### Emmet
 
 ![BEM with Emmet](https://pawelgrzybek.com/photos/2015-10-17-3.gif)
+
+-------------------------------
+## 分析一个栗子
+
+如何实现 这个导航箭头
+
+(同样的效果可以有多种实现方案)
