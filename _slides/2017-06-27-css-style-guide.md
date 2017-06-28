@@ -187,20 +187,15 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 
 ~~
 
-### SCSS
-`$`
-```
+### SCSS `&`
+```scss
 .nav {
     &__list {
-      font-size:1em;
-      &__item {
-        border:1em;
-      }    
+      font-size: 1em;
+      &__item { border: 1em; }
     }
   &__link {
-    &--active { 
-      color:green;
-    }
+    &--active { color: green; }
   }
 }
 ```
