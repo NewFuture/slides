@@ -187,7 +187,7 @@ LESS,a CSS pre-processor, extends CSS
 ### LESS 基本用法
 
 LESS 和 SCSS 一样源自SASS,写法上更接近CSS
-```less
+```scss
 .header {
     color: #000;
     h1 {
@@ -211,20 +211,20 @@ LESS 和 SCSS 一样源自SASS,写法上更接近CSS
 
 ### LESS  变量
 
-```less
+```scss
 @mainColor: #963; //以@开头
 body {
   color: @mainColor;
 }
 ```
-```less
+```scss
 @property: color;
 .widget {
   @{property}: #0ee; // 字符变量@{}
 }
 ```
 变量名可以是变量
-```less
+```scss
 @jack: "I am jack.";
 @var: 'jack';
 .msg{
@@ -237,7 +237,7 @@ LESS的变量是 **惰性(Lazy Loading)** 计算
 ~~
 ### LESS 计算和条件控制
 
-```less
+```scss
 @the-border: 1px;
 #header {
   border-left: @the-border;
@@ -246,7 +246,7 @@ LESS的变量是 **惰性(Lazy Loading)** 计算
 ```
 
 LESS条件判断 非常有限
-```less
+```scss
 .mixin (@color) when (lightness(@color) >= 50%) {
   background-color: black;
 }
@@ -262,7 +262,7 @@ LESS条件判断 非常有限
 
 ~~
 ### LESS Mixins 和 函数
-```less
+```scss
 .border-radius(@values: 1px) {
   -webkit-border-radius: @values;
      -moz-border-radius: @values;
@@ -277,7 +277,7 @@ div {
 ```
 
 不能单独定义函数 (可使用Mixins模拟)
-```less
+```scss
 .average(@x, @y) {
   @average: ((@x + @y) / 2);
 }
@@ -303,7 +303,7 @@ Node.JS实现的最像脚本语言的CSS预处理语言
 ### Stylus 书写方式
 省略一切可以省略的(`{}`,`;`,`:`)
 
-```stylus
+```sass
 body
   font 12px, sans-serif
 
@@ -326,14 +326,14 @@ a .button:hover { color: #000; }
 
 非常灵活
 
-```stylus
+```sass
 font-size = 12px /*比JS的赋值更自由*/
 body
   font font-size Arial, sans-serif
 ```
 `@`访问内部属性
 
-```stylus
+```sass
 #logo
   width: 150px
   height: 80px
@@ -342,20 +342,20 @@ body
 ```
 
 `Sprintf`的替换方式的字符串模板
-```stylus
+```sass
 '-webkit-gradient(%s, %s, %s)' % (linear (0 0) (0 100%))
 ```
 
 ~~
 ### Stylus 运算 和 条件控制
 算术运算和逻辑运算都支持,也支持三元操作符
-```stylus
+```sass
 .box
  num = 5
  border: num ? unit(num, 'px') : 20px
 ```
 条件 `if / else if / else ; unless`
-```stylus
+```sass
 body
   for num in 1 2 3
     foo num
@@ -367,7 +367,7 @@ body
 ### 代码块复用
 `SASS`和`LESS`支持的复用方式Stylus几乎都支持
 
-```stylus
+```sass
 .message
   border: 1px solid #eee
 .warning
@@ -378,7 +378,7 @@ body
   border-color: red
 ```
 除了`@extend`也支持`@block`
-```stylus
+```sass
 foo = @block {
   width: 20px
   height: 20px
@@ -395,7 +395,7 @@ foo = @block {
 * 支持函数嵌套，匿名函数，函数指针等复杂用法
 * 可使变参函数，也可像python一样指定参数值
 
-```stylus
+```sass
 border-radius(values)
   -webkit-border-radius: values
   -moz-border-radius: values
@@ -403,7 +403,7 @@ border-radius(values)
 div 
   border-radius(10px)
 ```
-```stylus
+```sass
 first-even(nums)
   return n if n % 2 == 0 for n in nums
 body
