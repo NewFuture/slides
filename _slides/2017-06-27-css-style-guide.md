@@ -25,7 +25,7 @@ theme: black
 ~~
 
 ### DRY
-1. 合并
+1. 合并相同和相近
 ```css
 selector{
     border-top:1px solid #eee;
@@ -43,7 +43,12 @@ selector{
 
 ~~
 
-### 
+### 不影响周围布局
+
+尽量避免在基础模块中使用这些属性
+* float: left/right ; (脱离文档流)
+* position: **absolute**  / **fixed** ;(脱离文档流)
+* 最外层使用 `margin`(margin穿透等不稳定)
 
 ~~
 ### 嵌套层数
@@ -54,8 +59,63 @@ selector{
 * 多层嵌套太深，增加解析成本
 
 -------------------------------
+## 开发规范
+
+* 方便阅读和维护
+* 避免冲突和污染
+
+适合对象: 大型项目 团队开发
+
+-------------------------------
 ## BEM 规范
 
+使用最多的CSS规范
+
+解决核心的问题逻辑: **命名问题**
+
+顺带确定逻辑划分
+
+Notes:
+源自俄罗斯的互联网公司团队
+
+~~ 
+
+### 划分原则
+BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
+
+* B: **B**lcok 块, 所有名称从block开始
+* E: **E**lement 元素, 默认用`__`连接
+* M: **M**odifier 修改 (样式标志或者状态),默认用 `--`连接
+
+单词用小写短横线`-`连接
+
+>.block__element--modifier
+>.block__element
+>.block--modifier
+
+~~
+
+![BEM 划分逻辑](http://getbem.com/assets/github_captions.jpg)
+
+~~
+
+### 一个BEM的栗子
+
+```html
+<form class="form form--theme-xmas form--simple">
+  <input class="form__input" type="text" />
+  <input class="form__submit form__submit--disabled" type="submit" />
+</form>
+```
+
+```css
+.form { } /*block*/
+.form--theme-xmas { }  /*modifier style*/
+.form--simple { } /*modifier flag*/
+.form__input { } /*element*/
+.form__submit { } /*element*/
+.form__submit--disabled { } /*element status*/
+```
 
 -------------------------------
 ## SUIT 规范
@@ -80,3 +140,11 @@ selector{
 如何实现 这个导航箭头
 
 (同样的效果可以有多种实现方案)
+
+
+
+-------
+## References
+
+* BEM： <http://getbem.com/naming/>
+* SUIT CSS: <https://github.com/suitcss/suit/blob/master/doc/README.md>
