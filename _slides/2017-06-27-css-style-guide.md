@@ -183,6 +183,7 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 -------------------------------
 ### SCSS + Emmet
 
+重复的内容使用工具
 
 ~~
 
@@ -194,13 +195,52 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 ![BEM with Emmet](https://pawelgrzybek.com/photos/2015-10-17-3.gif)
 
 -------------------------------
-## 分析一个栗子
+## 分析一个CSS栗子
 
 如何实现 这个导航箭头
+![](/assets/img/navigator.jpg)
 
 (同样的效果可以有多种实现方案)
 
+~~
+### 实现方案
 
+1. 嵌套 img 标签
+2. css 背景图片 
+3. css 字体图标 
+4. css 动画
+
+~~
+## 图片方案
+```html
+<img class="arrow" src="arrow.jpg"></img>
+```
+
+```css
+.arrow{
+    background:url(arrow.jpg);;
+    background-repeat:no-repeat;
+}
+```
+
+## CSS 伪元素方案
+
+```css
+.arrow::after{
+    font-family: "myicon-font";
+    content: "\0030";
+}
+```
+
+```css
+.arrow::after {
+    content: " ";
+    border-width: 3px 3px 0 0;
+    border-color: #888888;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+```
 
 -------
 ## References
