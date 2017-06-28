@@ -20,7 +20,7 @@ theme: black
 
 * DRY：Don't Repeat Yourself
 * 不影响周围布局
-* 嵌套层次
+* 嵌套层次不易过多
 
 ~~
 
@@ -53,9 +53,9 @@ selector{
 ~~
 ### 嵌套层数
 
-两层到三层为佳
+一层到三层为佳
 
-* 单层容易冲突
+* 单层要注意冲突
 * 多层嵌套太深，增加解析成本
 
 -------------------------------
@@ -87,7 +87,7 @@ Notes:
 
 * B: **B**lcok 块, 所有名称从block开始
 * E: **E**lement 元素, 默认用`__`连接
-* M: **M**odifier 修改 (样式标志或者状态),默认用 `--`连接
+* M: **M**odifier 修改(样式标志或状态),默认用 `--`连接
 
 ```css
 .block__element--modifier
@@ -128,38 +128,61 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 
 针对BEM的改进方案
 
+特点是组件化，名字**更短**更易读
 
 ~~
 
 ### SUIT 命名原则
 
+* 驼峰命名 
+* 组件为基本单元(相当于BEM的block)
+* 后代名(相当于BEM的Element)使用`-`连接
+* modifier 表示主题样式
+* 独立出 `is-state` 表示状态
+
 ```css
 .ComponentName
-.ComponentName--modifierName
 .ComponentName-descendentName
+.ComponentName--modifierName
 .ComponentName .is-stateOfComponent
 ```
 
 ~~
+### modifier 和 state
 
-### 一个栗子(筛选自twitter)
+```css
+/* Core button */
+.Button { /* … */ }
+/* Default button style */
+.Button--default { /* … */ }
+```
+
+```css
+.Tweet { /* … */ }
+.Tweet.is-expanded { /* … */ }
+```
+
+~~
+
+### 蒸栗子(筛选自twitter)
 ```html
 <div class="RichEditor RichEditor--emojiPicker ">
-    <div class="RichEditor-bottomItems">
-        <div class="EmojiPicker dropdown is-loading">
-            <button type="button" class="EmojiPicker-trigger u-textUserColorHover">
-                <span class="Icon Icon--smiley"></span>
-            </button>
-            <div class="EmojiPicker-dropdownMenu">
-                <div class="EmojiPicker-content Caret Caret--stroked"></div>
-            </div>
-        </div>
+  <div class="RichEditor-bottomItems">
+    <div class="EmojiPicker dropdown is-loading">
+      <button class="EmojiPicker-trigger u-textUserColorHover">
+        <span class="Icon Icon--smiley"></span>
+      </button>
+      <div class="EmojiPicker-dropdownMenu">
+        <div class="EmojiPicker-content Caret Caret--stroked"></div>
+      </div>
     </div>
+  </div>
 </div>
 ```
 
 -------------------------------
 ### SCSS + Emmet
+
 
 ~~
 
@@ -183,4 +206,7 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 ## References
 
 * BEM： <http://getbem.com/naming/>
-* SUIT CSS: <https://github.com/suitcss/suit/blob/master/doc/README.md>
+* SUIT CSS: <https://suitcss.github.io/>
+
+~~
+## Thanks
