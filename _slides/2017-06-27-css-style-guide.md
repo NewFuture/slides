@@ -76,22 +76,28 @@ selector{
 顺带确定逻辑划分
 
 Notes:
+
 源自俄罗斯的互联网公司团队
 
 ~~ 
 
-### 划分原则
-BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
+### 划分和命名原则
+
+单词用小写短横线`-`连接
 
 * B: **B**lcok 块, 所有名称从block开始
 * E: **E**lement 元素, 默认用`__`连接
 * M: **M**odifier 修改 (样式标志或者状态),默认用 `--`连接
 
-单词用小写短横线`-`连接
+```css
+.block__element--modifier
+.block__element
+.block--modifier
+```
 
->.block__element--modifier
->.block__element
->.block--modifier
+Notes:
+
+BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 
 ~~
 
@@ -120,7 +126,37 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 -------------------------------
 ## SUIT 规范
 
+针对BEM的改进方案
 
+
+~~
+
+### SUIT 命名原则
+
+```css
+.ComponentName
+.ComponentName--modifierName
+.ComponentName-descendentName
+.ComponentName .is-stateOfComponent
+```
+
+~~
+
+### 一个栗子(筛选自twitter)
+```html
+<div class="RichEditor RichEditor--emojiPicker ">
+    <div class="RichEditor-bottomItems">
+        <div class="EmojiPicker dropdown is-loading">
+            <button type="button" class="EmojiPicker-trigger u-textUserColorHover">
+                <span class="Icon Icon--smiley"></span>
+            </button>
+            <div class="EmojiPicker-dropdownMenu">
+                <div class="EmojiPicker-content Caret Caret--stroked"></div>
+            </div>
+        </div>
+    </div>
+</div>
+```
 
 -------------------------------
 ### SCSS + Emmet
