@@ -4,6 +4,9 @@ description: CSS Pre-processor and Languages
 lang: zh
 transition: slide
 theme: black
+plunins:
+  - src: //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js
+  - src: //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stylus.min.js
 
 ---
 ## 目录
@@ -187,7 +190,7 @@ LESS,a CSS pre-processor, extends CSS
 ### LESS 基本用法
 
 LESS 和 SCSS 一样源自SASS,写法上更接近CSS
-```scss
+```less
 .header {
     color: #000;
     h1 {
@@ -211,20 +214,20 @@ LESS 和 SCSS 一样源自SASS,写法上更接近CSS
 
 ### LESS  变量
 
-```scss
+```less
 @mainColor: #963; //以@开头
 body {
   color: @mainColor;
 }
 ```
-```scss
+```less
 @property: color;
 .widget {
   @{property}: #0ee; // 字符变量@{}
 }
 ```
 变量名可以是变量
-```scss
+```less
 @jack: "I am jack.";
 @var: 'jack';
 .msg{
@@ -237,7 +240,7 @@ LESS的变量是 **惰性(Lazy Loading)** 计算
 ~~
 ### LESS 计算和条件控制
 
-```scss
+```less
 @the-border: 1px;
 #header {
   border-left: @the-border;
@@ -246,7 +249,7 @@ LESS的变量是 **惰性(Lazy Loading)** 计算
 ```
 
 LESS条件判断 非常有限
-```scss
+```less
 .mixin (@color) when (lightness(@color) >= 50%) {
   background-color: black;
 }
@@ -262,7 +265,7 @@ LESS条件判断 非常有限
 
 ~~
 ### LESS Mixins 和 函数
-```scss
+```less
 .border-radius(@values: 1px) {
   -webkit-border-radius: @values;
      -moz-border-radius: @values;
@@ -277,7 +280,7 @@ div {
 ```
 
 不能单独定义函数 (可使用Mixins模拟)
-```scss
+```less
 .average(@x, @y) {
   @average: ((@x + @y) / 2);
 }
@@ -303,7 +306,7 @@ Node.JS实现的最像脚本语言的CSS预处理语言
 ### Stylus 书写方式
 省略一切可以省略的(`{}`,`;`,`:`)
 
-```sass
+```stylus
 body
   font 12px, sans-serif
 
@@ -326,14 +329,14 @@ a .button:hover { color: #000; }
 
 非常灵活
 
-```sass
+```stylus
 font-size = 12px /*比JS的赋值更自由*/
 body
   font font-size Arial, sans-serif
 ```
 `@`访问内部属性
 
-```sass
+```stylus
 #logo
   width: 150px
   height: 80px
@@ -342,20 +345,20 @@ body
 ```
 
 `Sprintf`的替换方式的字符串模板
-```sass
+```stylus
 '-webkit-gradient(%s, %s, %s)' % (linear (0 0) (0 100%))
 ```
 
 ~~
 ### Stylus 运算 和 条件控制
 算术运算和逻辑运算都支持,也支持三元操作符
-```sass
+```stylus
 .box
  num = 5
  border: num ? unit(num, 'px') : 20px
 ```
 条件 `if / else if / else ; unless`
-```sass
+```stylus
 body
   for num in 1 2 3
     foo num
@@ -367,7 +370,7 @@ body
 ### 代码块复用
 `SASS`和`LESS`支持的复用方式Stylus几乎都支持
 
-```sass
+```stylus
 .message
   border: 1px solid #eee
 .warning
@@ -378,7 +381,7 @@ body
   border-color: red
 ```
 除了`@extend`也支持`@block`
-```sass
+```stylus
 foo = @block {
   width: 20px
   height: 20px
@@ -395,7 +398,7 @@ foo = @block {
 * 支持函数嵌套，匿名函数，函数指针等复杂用法
 * 可使变参函数，也可像python一样指定参数值
 
-```sass
+```stylus
 border-radius(values)
   -webkit-border-radius: values
   -moz-border-radius: values
@@ -403,7 +406,7 @@ border-radius(values)
 div 
   border-radius(10px)
 ```
-```sass
+```stylus
 first-even(nums)
   return n if n % 2 == 0 for n in nums
 body

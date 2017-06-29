@@ -116,6 +116,14 @@ layout: compress
             condition: function() { return head.desktop},            
             async: true,
           }
+          {% for plugin in page.plugins %}
+           ,{
+             src: '{{ plugin.src }}',
+             {% if plugin.async %}
+             async: true
+             {% endif %}             
+          }
+          {% endfor %}
         ]
       });
     </script>
