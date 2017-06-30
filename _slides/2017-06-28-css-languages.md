@@ -4,7 +4,7 @@ description: CSS Pre-processor and Languages
 lang: zh
 transition: slide
 theme: black
-plugins: [ { src: "/assets/js/highlight.js",callback: "hljs.initHighlighting"} ]
+plugins: [ { src: "/assets/js/highlight.js",callback: "function(){hljs.initHighlighting()}"} ]
 
 ---
 ## 目录
