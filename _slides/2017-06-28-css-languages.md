@@ -4,9 +4,9 @@ description: CSS Pre-processor and Languages
 lang: zh
 transition: slide
 theme: black
-plunins:
-  - src: //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js
-  - src: //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stylus.min.js
+plunins: [ "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js",
+          "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stylus.min.js"
+]
 
 ---
 ## 目录

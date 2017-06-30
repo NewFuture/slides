@@ -118,7 +118,7 @@ layout: compress
           }
           {% for plugin in page.plugins %}
            ,{
-             src: '{{ plugin.src }}',
+             src: '{{ plugin}}',
              {% if plugin.async %}
              async: true
              {% endif %}             
