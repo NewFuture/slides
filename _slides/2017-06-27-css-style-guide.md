@@ -4,6 +4,10 @@ description: CSS Style Guide for Team Work
 lang: zh
 transition: slide
 theme: black
+redirect_from:
+  - "/CSS实践指南/"
+  - "/CSS实践指南"  
+  - "/css-style-guide"
 ---
 
 ## 内容提要

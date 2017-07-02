@@ -1,9 +1,13 @@
 ---
-title: CSS模块化和原则
+title: CSS模块化及原则
 description: CSS Modularization and Rules
 lang: zh
 transition: slide
 theme: black
+redirect_from:
+  - "/CSS模块化及原则/"
+  - "/CSS模块化及原则"  
+  - "/css-modularization-and-rules"
 ---
 
 ## 内容提要
