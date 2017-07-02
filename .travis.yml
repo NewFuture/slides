@@ -3,6 +3,7 @@
 # 一下基本设置
 sudo: false
 language: ruby
+rvm: 2.2
 # dist: trusty (Ubuntu 16.04)
 
 install:
