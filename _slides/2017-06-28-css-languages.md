@@ -4,8 +4,13 @@ description: CSS Pre-processor and Languages
 lang: zh
 transition: slide
 theme: black
-plugins: [ { src: "/assets/js/highlight.js",callback: "function(){hljs.initHighlighting()}"} ]
-redirect_from: "/CSS预处理语言/"
+plugins: 
+  - { src: "/assets/js/highlight.js", callback: "function(){hljs.initHighlighting()}"}
+
+redirect_from: 
+  - "/CSS预处理语言/"
+  - "/CSS预处理语言"
+  - "/css-languages"
 ---
 ## 目录
 

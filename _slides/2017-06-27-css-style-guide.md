@@ -5,7 +5,8 @@ lang: zh
 transition: slide
 theme: black
 redirect_from:
-  -  "/CSS实践指南/"
+  - "/CSS实践指南/"
+  - "/CSS实践指南"  
   - "/css-style-guide"
 ---
 
