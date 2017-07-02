@@ -29,15 +29,15 @@ env:
     - GIT_COMMITTER_EMAIL: "${GIT_COMMITTER_NAME}@users.noreply.github.com"
 
 # 可选设置
-# #运行Travis的分支
-# branches: 
-#   only: #只build master
-#   - master
+#运行Travis的分支
+branches: 
+  only: #只build master
+  - master
 
-# #git clone目录深度
-# #clone 目录深度 1 提高速度
-# git: 
-#   depth: 1
+#git clone目录深度
+#clone 目录深度 1 提高速度
+git: 
+  depth: 1
 
 
 
