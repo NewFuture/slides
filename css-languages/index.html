@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"/><title>CSS预处理语言 | Css languages</title><meta name="description" content="CSS Pre-processor and Languages"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="HandheldFriendly" content="true"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link href="https://cdn.bootcss.com/reveal.js/3.5.0/css/reveal.min.css" rel="stylesheet"><link href="/assets/css/slide.css" rel="stylesheet"><link href="https://cdn.bootcss.com/reveal.js/3.5.0/css/theme/black.min.css" id="theme" rel="stylesheet"><link rel="canonical" href="http://slides.newfuture.cc/css-languages/"></head><body><main class="reveal"><div class="slides"><section><h1>CSS预处理语言</h1><div><img class="qrcode" src="/assets/icon/loading.gif" data-src="https://pan.baidu.com/share/qrcode?w=200&h=200&url=http://slides.newfuture.cc/css-languages/" alt="CSS预处理语言"/></div><p>CSS Pre-processor and Languages</p><small><a href="/css-languages/">slides.newfuture.cc/css-languages/</a></small></section><section><section><h2 id="目录">目录</h2><ul><li>SASS &amp; SCSS</li><li>LESS</li><li>Stylus</li><li>对比总结</li></ul></section><section><h2 id="为什么需要预处理语言">为什么需要预处理语言?</h2><p>CSS 不是<strong>编程</strong>语言</p><p>模块化和多样化很困难</p><p>无法实现变量,条件函数等控制功能</p></section><section><ul><li>书写方式</li><li>变量</li><li>计算和条件控制</li><li>代码块重用</li><li>宏和函数</li></ul></section></section><section><section><h2 id="sass">SASS</h2><p><a href="http://sass-lang.com/">sass-lang.com</a></p><p>Ruby 实现的CSS预处理器</p><p><img src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="" /></p><p>最成熟、最稳定、最强大的CSS扩展语言</p></section><section><h3 id="sass-与-scss">SASS 与 SCSS</h3><p>SASS 依靠缩进控制</p><div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nc">.box</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span>
+</code></pre></div><p>SCSS 和 SASS 语法一致，写法靠近css</p><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>SCSS一般使用SASS的处理器进行编译</p></section><section><h3 id="scss-sass基本语法">SCSS (SASS)基本语法</h3><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;}</span>
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;}</span>
+  <span class="nt">span</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;}</span>
+<span class="p">}</span>
+</code></pre></div><p>编译后的css</p><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></section><section><h3 id="scss-sass变量">SCSS (SASS)变量</h3><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nv">$mainColor</span><span class="p">:</span> <span class="mh">#963</span><span class="p">;</span> <span class="c1">//以$开头
+</span><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$mainColor</span>
+<span class="p">}</span>
+</code></pre></div><p>也可在字符名中使用变量</p><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nv">$side</span> <span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="nc">.rounded</span> <span class="p">{</span>
+  <span class="nt">border-</span><span class="si">#{</span><span class="nv">$side</span><span class="si">}</span><span class="nt">-radius</span><span class="nd">:</span> <span class="nt">5px</span><span class="p">;</span> <span class="c1">//字符使用#{}
+</span><span class="p">}</span>
+</code></pre></div><p>SCSS变量3.4.21之后才有<strong>作用域</strong></p></section><section><h4 id="scsssass计算与条件控制">SCSS(SASS)计算与条件控制</h4><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="p">(</span><span class="m">14px</span><span class="o">/</span><span class="m">2</span><span class="p">);</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">50px</span> <span class="o">+</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="nv">$var</span> <span class="o">*</span> <span class="m">10%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nc">.a</span><span class="p">{</span>
+    <span class="k">@if</span> <span class="nf">lightness</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">30%</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$i</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span>
+<span class="k">@while</span> <span class="nv">$i</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="p">{</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nv">$i</span><span class="p">:</span> <span class="nv">$i</span> <span class="o">-</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></section><section><h3 id="scsssass-模块重用">SCSS(SASS) 模块重用</h3><p><code class="highlighter-rouge">@import</code> 导入模块</p><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">"reset.css"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"header"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"var.scss"</span><span class="p">;</span>
+</code></pre></div><p><code class="highlighter-rouge">@extend</code> 继承</p><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nc">.class1</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.class2</span> <span class="p">{</span>
+  <span class="k">@extend</span> <span class="nc">.class1</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span><span class="m">2em</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></section><section><h3 id="scsssass-mixin宏与函数">SCSS(SASS) Mixin(宏)与函数</h3><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">border-radius</span><span class="p">(</span><span class="nv">$values</span><span class="o">:</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span><span class="cm">/* @mixin*/</span>
+  <span class="na">-webkit-border-radius</span><span class="p">:</span> <span class="nv">$values</span><span class="p">;</span>
+     <span class="na">-moz-border-radius</span><span class="p">:</span> <span class="nv">$values</span><span class="p">;</span>
+          <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$values</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">border-radius</span><span class="p">(</span><span class="m">10px</span><span class="p">);</span><span class="cm">/* using mixin */</span>
+<span class="p">}</span>
+</code></pre></div><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="k">@function</span> <span class="nf">double</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/*function*/</span>
+    <span class="k">@return</span> <span class="nv">$n</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sidebar</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="nf">double</span><span class="p">(</span><span class="m">5px</span><span class="p">);}</span>
+</code></pre></div></section></section><section><section><h2 id="less">LESS</h2><p><a href="http://lesscss.org/">lesscss.org</a></p><p>JS 实现的 CSS 预处理器</p><p><img src="http://lesscss.org/public/img/logo.png" alt="less" /></p><p>LESS,a CSS pre-processor, extends CSS</p></section><section><h3 id="less-基本用法">LESS 基本用法</h3><p>LESS 和 SCSS 一样源自SASS,写法上更接近CSS</p><pre><code class="language-less">.header {
+    color: #000;
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: .8rem;
+        &amp;:hover { border-width: .1rem}
+      }
+    }
+}
+</code></pre><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.header</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;}</span>
+<span class="nc">.header</span> <span class="nt">h1</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">3rem</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.header</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">.8rem</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.header</span> <span class="nt">p</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">border-width</span><span class="p">:</span> <span class="m">.1rem</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></section><section><h3 id="less--变量">LESS 变量</h3><pre><code class="language-less">@mainColor: #963; //以@开头
+body {
+  color: @mainColor;
+}
+</code></pre><pre><code class="language-less">@property: color;
+.widget {
+  @{property}: #0ee; // 字符变量@{}
+}
+</code></pre><p>变量名可以是变量</p><pre><code class="language-less">@jack: "I am jack.";
+@var: 'jack';
+.msg{
+  content: @@var;  //编译结果: content: "I am jack.";
+}
+</code></pre><p>LESS的变量是 <strong>惰性(Lazy Loading)</strong> 计算</p></section><section><h3 id="less-计算和条件控制">LESS 计算和条件控制</h3><pre><code class="language-less">@the-border: 1px;
+#header {
+  border-left: @the-border;
+  border-right: @the-border * 2;
+}
+</code></pre><p>LESS条件判断 非常有限</p><pre><code class="language-less">.mixin (@color) when (lightness(@color) &gt;= 50%) {
+  background-color: black;
+}
+//循环使用条件判断迭代实现
+.generate-columns(4);
+.generate-columns(@n, @i: 1) when (@i =&lt; @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-columns(@n, (@i + 1));
+}
+</code></pre></section><section><h3 id="less-mixins-和-函数">LESS Mixins 和 函数</h3><pre><code class="language-less">.border-radius(@values: 1px) {
+  -webkit-border-radius: @values;
+     -moz-border-radius: @values;
+          border-radius: @values;
+} 
+div {
+  .border-radius(10px);
+}
+.m {
+    .border-radius;//默认参数
+}
+</code></pre><p>不能单独定义函数 (可使用Mixins模拟)</p><pre><code class="language-less">.average(@x, @y) {
+  @average: ((@x + @y) / 2);
+}
+div {
+  .average(16px, 50px); // "call" the mixin
+  padding: @average;    // use its "return" value
+}
+</code></pre></section></section><section><section><h2 id="stylus">stylus</h2><p><a href="http://stylus-lang.com/">stylus-lang.com</a></p><p>EXPRESSIVE, DYNAMIC, ROBUST CSS</p><p><img src="http://stylus-lang.com/img/stylus-logo.svg" alt="" /></p><p>Node.JS实现的最像脚本语言的CSS预处理语言</p></section><section><h3 id="stylus-书写方式">Stylus 书写方式</h3><p>省略一切可以省略的(<code class="highlighter-rouge"><span class="p">{}</span></code>,<code class="highlighter-rouge">;</code>,<code class="highlighter-rouge">:</code>)</p><pre><code class="language-stylus">body
+  font 12px, sans-serif
+
+a.button
+  border-radius 5px
+  &amp;:hover
+    color #000
+</code></pre><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span> <span class="nl">font</span><span class="p">:</span> <span class="m">12px</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">a</span> <span class="nc">.button</span> <span class="p">{</span> <span class="nl">border-radius</span><span class="p">:</span><span class="m">5px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">a</span> <span class="nc">.button</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div><p>当然，这样并太适合阅读</p></section><section><h3 id="stylus-变量">Stylus 变量</h3><p>非常灵活</p><pre><code class="language-stylus">font-size = 12px /*比JS的赋值更自由*/
+body
+  font font-size Arial, sans-serif
+</code></pre><p><code class="highlighter-rouge">@</code>访问内部属性</p><pre><code class="language-stylus">#logo
+  width: 150px
+  height: 80px
+  margin-left: -(@width / 2)
+  margin-top: -(@height / 2)
+</code></pre><p><code class="highlighter-rouge">Sprintf</code>的替换方式的字符串模板</p><pre><code class="language-stylus">'-webkit-gradient(%s, %s, %s)' % (linear (0 0) (0 100%))
+</code></pre></section><section><h3 id="stylus-运算-和-条件控制">Stylus 运算 和 条件控制</h3><p>算术运算和逻辑运算都支持,也支持三元操作符</p><pre><code class="language-stylus">.box
+ num = 5
+ border: num ? unit(num, 'px') : 20px
+</code></pre><p>条件 <code class="highlighter-rouge">if / else if / else ; unless</code></p><pre><code class="language-stylus">body
+  for num in 1 2 3
+    foo num
+</code></pre><p>几乎实现了脚本语言(python)的运算和条件分支</p></section><section><h3 id="代码块复用">代码块复用</h3><p><code class="highlighter-rouge">SASS</code>和<code class="highlighter-rouge">LESS</code>支持的复用方式Stylus几乎都支持</p><pre><code class="language-stylus">.message
+  border: 1px solid #eee
+.warning
+  @extends .message
+  border-color: yellow
+.error
+  @extends .message
+  border-color: red
+</code></pre><p>除了<code class="highlighter-rouge">@extend</code>也支持<code class="highlighter-rouge">@block</code></p><pre><code class="language-stylus">foo = @block {
+  width: 20px
+  height: 20px
+}
+.icon
+  {foo}
+</code></pre></section><section><h3 id="stylus-mixin-和-函数">Stylus Mixin 和 函数</h3><ul><li>Stylus 有最为复杂和灵活的函数支持</li><li>Mixin和函数合并，唯一的区别是有无返回值</li><li>支持函数嵌套，匿名函数，函数指针等复杂用法</li><li>可使变参函数，也可像python一样指定参数值</li></ul><pre><code class="language-stylus">border-radius(values)
+  -webkit-border-radius: values
+  -moz-border-radius: values
+  border-radius: values
+div 
+  border-radius(10px)
+</code></pre><pre><code class="language-stylus">first-even(nums)
+  return n if n % 2 == 0 for n in nums
+body
+  z-index first-even(1 3 5 5 6 3 2)
+</code></pre></section></section><section><section><h2 id="预处理语言对比">预处理语言对比</h2><table><thead><tr><th>语言</th><th style="text-align: left">SCSS</th><th style="text-align: center">LESS</th><th style="text-align: center">Stylus</th></tr></thead><tbody><tr><td>CSS兼容</td><td style="text-align: left">中</td><td style="text-align: center">高</td><td style="text-align: center">中</td></tr><tr><td>阅读性</td><td style="text-align: left">高</td><td style="text-align: center">高</td><td style="text-align: center">底</td></tr><tr><td>灵活性</td><td style="text-align: left">中</td><td style="text-align: center">低</td><td style="text-align: center">高</td></tr><tr><td>Mixin库</td><td style="text-align: left">多</td><td style="text-align: center">中</td><td style="text-align: center">少</td></tr><tr><td>难度</td><td style="text-align: left">中</td><td style="text-align: center">低</td><td style="text-align: center">高</td></tr></tbody></table></section><section><h3 id="语言选型">语言选型</h3><ul><li>CSS: UI和原型设计者(简单页面)</li><li><strong>SCSS: 前端团队或者全栈团队</strong></li><li>LESS: 个人或前端团队(样式设计为主)</li><li>Stylus: 编程能力强的个人或者小团队</li></ul></section><section><h3 id="try-it">Try It</h3><ul><li>SCSS: <a href="https://www.sassmeister.com/">https://www.sassmeister.com/</a></li><li>LESS: <a href="http://less2css.org/">http://less2css.org/</a></li><li>Stylus: <a href="http://stylus-lang.com/try.html">http://stylus-lang.com/try.html</a></li></ul></section></section></div></main><script src="https://cdn.bootcss.com/reveal.js/3.5.0/lib/js/head.min.js"></script><script src="https://cdn.bootcss.com/reveal.js/3.5.0/js/reveal.min.js"></script><script> Reveal.initialize({ loop: false, controls: true, progress: true, history: true, center: true, touch: true, slideNumber: 'c/t', transition: 'slide', dependencies: [ { src: 'https://cdn.bootcss.com/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } }, /*{ src: 'https://cdn.bootcss.com/reveal.js/3.5.0/plugin/zoom-js/zoom.min.js', async: true },*/ { src: '/assets/js/notes.plugin.min.js', condition: function() { return head.desktop}, async: true, } ,{ src: '/assets/js/highlight.js', callback: function(){hljs.initHighlighting()}, } ] });</script></body></html>

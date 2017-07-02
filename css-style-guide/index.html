@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"/><title>CSS实践指南 | Css style guide</title><meta name="description" content="CSS Style Guide for Team Work"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="HandheldFriendly" content="true"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link href="https://cdn.bootcss.com/reveal.js/3.5.0/css/reveal.min.css" rel="stylesheet"><link href="/assets/css/slide.css" rel="stylesheet"><link href="https://cdn.bootcss.com/reveal.js/3.5.0/css/theme/black.min.css" id="theme" rel="stylesheet"><link rel="canonical" href="http://slides.newfuture.cc/css-style-guide/"></head><body><main class="reveal"><div class="slides"><section><h1>CSS实践指南</h1><div><img class="qrcode" src="/assets/icon/loading.gif" data-src="https://pan.baidu.com/share/qrcode?w=200&h=200&url=http://slides.newfuture.cc/css-style-guide/" alt="CSS实践指南"/></div><p>CSS Style Guide for Team Work</p><small><a href="/css-style-guide/">slides.newfuture.cc/css-style-guide/</a></small></section><section><h2 id="内容提要">内容提要</h2><ul><li>样式实现基本原则</li><li>BEM 规范</li><li>SUIT 规范</li><li>SCSS + Emmet</li><li>一个栗子</li></ul></section><section><section><h2 id="样式实现原则">样式实现原则</h2><ul><li>DRY：Don’t Repeat Yourself</li><li>不影响周围布局</li><li>嵌套层次不易过多</li></ul></section><section><h3 id="dry">DRY</h3><ol><li>合并相同和相近<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">selector</span><span class="p">{</span>
+ <span class="nl">border-top</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#eee</span><span class="p">;</span>
+ <span class="nl">border-left</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#eee</span><span class="p">;</span>
+ <span class="nl">border-bottom</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#eee</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">selector</span><span class="p">{</span>
+ <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#eee</span><span class="p">;</span>
+ <span class="nl">border-right</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li><li>重复内容使用函数和变量(预处理语言)</li></ol></section><section><h3 id="不影响周围布局">不影响周围布局</h3><p>尽量避免在基础模块中使用这些属性</p><ul><li>float: left/right ; (脱离文档流)</li><li>position: <strong>absolute</strong> / <strong>fixed</strong> ;(脱离文档流)</li><li>最外层使用 <code class="highlighter-rouge">margin</code>(margin穿透等不稳定)</li></ul></section><section><h3 id="嵌套层数">嵌套层数</h3><p>一层到三层为佳</p><ul><li>单层要注意冲突</li><li>多层嵌套太深，增加解析成本</li></ul></section></section><section><h2 id="开发规范">开发规范</h2><ul><li>方便阅读和维护</li><li>避免冲突和污染</li></ul><p>适合对象: 大型项目 团队开发</p></section><section><section><h2 id="bem-规范">BEM 规范</h2><p>使用最多的CSS规范</p><p>解决核心的问题逻辑: <strong>命名问题</strong></p><p>顺带确定逻辑划分</p><aside class="notes"><p>源自俄罗斯的互联网公司团队</p></aside></section><section><h3 id="划分和命名原则">划分和命名原则</h3><p>单词用小写短横线<code class="highlighter-rouge">-</code>连接</p><ul><li>B: <strong>B</strong>lcok 块, 所有名称从block开始</li><li>E: <strong>E</strong>lement 元素, 默认用<code class="highlighter-rouge">__</code>连接</li><li>M: <strong>M</strong>odifier 修改(样式标志或状态),默认用 <code class="highlighter-rouge">--</code>连接</li></ul><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.block__element--modifier</span>
+<span class="nc">.block__element</span>
+<span class="nc">.block--modifier</span>
+</code></pre></div><aside class="notes"><p>BEM 将 HTML 划分位 <code class="highlighter-rouge">块</code>(包含 <code class="highlighter-rouge">元素</code>和 <code class="highlighter-rouge">修改</code> )</p></aside></section><section><p><img src="http://getbem.com/assets/github_captions.jpg" alt="BEM 划分逻辑" /></p></section><section><h3 id="一个bem的栗子">一个BEM的栗子</h3><div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form form--theme-xmas form--simple"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form__input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form__submit form__submit--disabled"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.form</span> <span class="p">{</span> <span class="p">}</span> <span class="c">/*block*/</span>
+<span class="nc">.form--theme-xmas</span> <span class="p">{</span> <span class="p">}</span>  <span class="c">/*modifier style*/</span>
+<span class="nc">.form--simple</span> <span class="p">{</span> <span class="p">}</span> <span class="c">/*modifier flag*/</span>
+<span class="nc">.form__input</span> <span class="p">{</span> <span class="p">}</span> <span class="c">/*element*/</span>
+<span class="nc">.form__submit</span> <span class="p">{</span> <span class="p">}</span> <span class="c">/*element*/</span>
+<span class="nc">.form__submit--disabled</span> <span class="p">{</span> <span class="p">}</span> <span class="c">/*element status*/</span>
+</code></pre></div></section></section><section><section><h2 id="suit-规范">SUIT 规范</h2><p>针对BEM的改进方案</p><p>特点是组件化，名字<strong>更短</strong>更易读</p></section><section><h3 id="suit-命名原则">SUIT 命名原则</h3><ul><li>驼峰命名</li><li>组件为基本单元(相当于BEM的block)</li><li>后代名(相当于BEM的Element)使用<code class="highlighter-rouge">-</code>连接</li><li>modifier 表示主题样式</li><li>独立出 <code class="highlighter-rouge">is-state</code> 表示状态</li></ul><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ComponentName</span>
+<span class="nc">.ComponentName-descendentName</span>
+<span class="nc">.ComponentName--modifierName</span>
+<span class="nc">.ComponentName</span> <span class="nc">.is-stateOfComponent</span>
+</code></pre></div></section><section><h3 id="modifier-和-state">modifier 和 state</h3><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Core button */</span>
+<span class="nc">.Button</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+<span class="c">/* Default button style */</span>
+<span class="nc">.Button--default</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+</code></pre></div><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.Tweet</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+<span class="nc">.Tweet.is-expanded</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+</code></pre></div></section><section><h3 id="蒸栗子筛选自twitter">蒸栗子(筛选自twitter)</h3><div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"RichEditor RichEditor--emojiPicker "</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"RichEditor-bottomItems"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"EmojiPicker dropdown is-loading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"EmojiPicker-trigger u-textUserColorHover"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Icon Icon--smiley"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"EmojiPicker-dropdownMenu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"EmojiPicker-content Caret Caret--stroked"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></section></section><section><section><h3 id="scss--emmet">SCSS + Emmet</h3><p>重复的内容使用工具</p></section><section><h3 id="scss-">SCSS <code class="highlighter-rouge">&amp;</code></h3><div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nc">.nav</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nt">__list</span> <span class="p">{</span>
+      <span class="nl">font-size</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+      <span class="k">&amp;</span><span class="nt">__item</span> <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="k">&amp;</span><span class="nt">__link</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nt">--active</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.nav__list</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.nav__list__item</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.nav__link--active</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></section><section><h3 id="emmet">Emmet</h3><p><img src="https://pawelgrzybek.com/photos/2015-10-17-3.gif" alt="BEM with Emmet" /></p></section></section><section><section><h2 id="分析一个css栗子">分析一个CSS栗子</h2><p>如何实现 这个导航箭头</p><p><img src="/assets/img/navigator.jpg" alt="" /></p><p>(同样的效果可以有多种实现方案)</p></section><section><h3 id="实现方案">实现方案</h3><ol><li>嵌套 img 标签</li><li>css 背景图片</li><li>css 字体图标</li><li>css 动画</li></ol></section><section><h2 id="图片方案">图片方案</h2><div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"arrow"</span> <span class="na">src=</span><span class="s">"arrow.jpg"</span><span class="nt">&gt;&lt;/img&gt;</span>
+</code></pre></div><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.arrow</span><span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span><span class="sx">url(arrow.jpg)</span><span class="p">;</span><span class="err">;</span>
+    <span class="nl">background-repeat</span><span class="p">:</span><span class="nb">no-repeat</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></section><section><h2 id="css-伪元素方案">CSS 伪元素方案</h2><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.arrow</span><span class="nd">::after</span><span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"myicon-font"</span><span class="p">;</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s1">"\0030"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.arrow</span><span class="nd">::after</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s1">" "</span><span class="p">;</span>
+    <span class="nl">border-width</span><span class="p">:</span> <span class="m">3px</span> <span class="m">3px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="m">#888888</span><span class="p">;</span>
+    <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+    <span class="nl">transform</span><span class="p">:</span> <span class="n">matrix</span><span class="p">(</span><span class="m">0.71</span><span class="p">,</span> <span class="m">0.71</span><span class="p">,</span> <span class="m">-0.71</span><span class="p">,</span> <span class="m">0.71</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></section></section><section><section><h2 id="references">References</h2><ul><li>BEM： <a href="http://getbem.com/naming/">http://getbem.com/naming/</a></li><li>SUIT CSS: <a href="https://suitcss.github.io/">https://suitcss.github.io/</a></li></ul></section><section><h2 id="thanks">Thanks</h2></section></section></div></main><script src="https://cdn.bootcss.com/reveal.js/3.5.0/lib/js/head.min.js"></script><script src="https://cdn.bootcss.com/reveal.js/3.5.0/js/reveal.min.js"></script><script> Reveal.initialize({ loop: false, controls: true, progress: true, history: true, center: true, touch: true, slideNumber: 'c/t', transition: 'slide', dependencies: [ { src: 'https://cdn.bootcss.com/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } }, /*{ src: 'https://cdn.bootcss.com/reveal.js/3.5.0/plugin/zoom-js/zoom.min.js', async: true },*/ { src: '/assets/js/notes.plugin.min.js', condition: function() { return head.desktop}, async: true, } ] });</script></body></html>
