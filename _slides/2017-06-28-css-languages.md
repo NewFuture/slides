@@ -5,7 +5,7 @@ lang: zh
 transition: slide
 theme: black
 plugins: [ { src: "/assets/js/highlight.js",callback: "function(){hljs.initHighlighting()}"} ]
-
+redirect_from: "/CSS预处理语言/"
 ---
 ## 目录
 

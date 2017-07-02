@@ -52,4 +52,4 @@ sass:
   sass_dir: _sass
 
 gems:
-  - remote-include
+  - jekyll-redirect-from

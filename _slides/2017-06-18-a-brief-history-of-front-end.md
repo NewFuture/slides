@@ -6,6 +6,10 @@ transition: slide
 theme: black
 width: 1280
 height: 720
+redirect_from:
+  -  "/前端简史/"
+  -  "/前端简史"  
+  - "/a-brief-history-of-front-end"
 ---
 
 ## 目录
