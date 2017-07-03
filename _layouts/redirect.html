@@ -1,0 +1,18 @@
+--- 
+layout: compress 
+---
+<!DOCTYPE html>
+<html lang="zh">
+<meta charset="utf-8">
+<script>
+    location = "{{ page.redirect.to }}"
+</script>
+<title>跳转中&hellip;</title>
+<meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+<link rel="canonical" href="{{ page.redirect.to }}">
+<meta name="robots" content="noindex">
+<body>
+    <h1>正在重定向到{{page.title}}&hellip;</h1>
+    <a href="{{ page.redirect.to }}">点此立即跳转至{{page.title}}</a>
+</body>
+</html>
