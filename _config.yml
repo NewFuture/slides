@@ -13,7 +13,7 @@ reveal:
   cdn:               "https://cdn.bootcss.com/reveal.js/3.5.0/"
   # qrcode:            "http://qr.topscan.com/api.php?w=200&m=10&logo=http://slides.newfuture.cc/assets/icon/avatar.min.jpg&text="  
   qrcode:            "https://pan.baidu.com/share/qrcode?w=200&h=200&url="
-  qrcode:            "https://api.qrserver.com/v1/create-qr-code/?size=200x200&format=svg&data="
+  # qrcode:            "https://api.qrserver.com/v1/create-qr-code/?size=200x200&format=svg&data="
 
 markdown:             kramdown
 kramdown:
