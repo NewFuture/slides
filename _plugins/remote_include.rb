@@ -5,9 +5,9 @@ module Jekyll
 
   class RemoteInclude < Liquid::Tag
 
-    def initialize(tag_name, remote_include, tokens)
+    def initialize(tag_name, markup, tokens)
       super
-      @remote_include = remote_include
+      @markup = markup
     end
 
     def open(url)
@@ -15,7 +15,10 @@ module Jekyll
     end
 
     def render(context)
-      open("#{@remote_include}")
+      # Render any liquid variables in tag arguments and unescape template code
+      render_markup = Liquid::Template.parse(@markup).render(context).gsub(/\\\{\\\{|\\\{\\%/, '\{\{' => '{{', '\{\%' => '{%')
+
+      open(render_markup)
     end
 
   end
