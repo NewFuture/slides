@@ -2,6 +2,11 @@
     text-align: left;
 }
 .qrcode{
-    width: 200px;
-    height: 200px;
+    margin: auto;
+    // width: 200px;
+    // height: 200px;
+    svg{
+        border: 10px white solid;
+        border-radius: 15px;
+    }
 }
