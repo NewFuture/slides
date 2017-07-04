@@ -11,13 +11,13 @@ module Jekyll
     end
 
     def open(url)
+      puts url
       Net::HTTP.get(URI.parse(url.strip)).force_encoding 'utf-8'
     end
 
     def render(context)
       # Render any liquid variables in tag arguments and unescape template code
       render_markup = Liquid::Template.parse(@markup).render(context).gsub(/\\\{\\\{|\\\{\\%/, '\{\{' => '{{', '\{\%' => '{%')
-
       open(render_markup)
     end
 
