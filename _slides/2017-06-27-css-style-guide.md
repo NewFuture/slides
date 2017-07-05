@@ -275,6 +275,3 @@ BEM 将 HTML 划分位 `块`(包含 `元素`和 `修改` )
 
 * BEM： <http://getbem.com/naming/>
 * SUIT CSS: <https://suitcss.github.io/>
-
-~~
-## Thanks

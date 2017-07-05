@@ -18,3 +18,14 @@ $qrcode-color: #008;
     //     fill: $qrcode-color;
     // }
 }
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    .link{
+        border-radius: 5px;
+        border: 2px solid;
+        font-size: .5em;
+        padding: 1% 2%;
+    }
+}
