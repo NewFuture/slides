@@ -32,13 +32,12 @@ layout: compress
 
     <main class="reveal">
       <div class="slides">
+        {% if site.reveal.title_slide && !page.no_title %}
+          {% include title-slide.html %}
+        {% endif %}
 
         {% if content contains site.reveal.slide_separator %}
         {% assign page_slides = content | split: site.reveal.slide_separator %}
-
-        {% if site.reveal.title_slide %}
-          {% include title-slide.html %}
-        {% endif %}
 
         {% for slide in page_slides %}
 
@@ -92,6 +91,9 @@ layout: compress
 
         {% endif %}
 
+        {% !page.no_end %}
+          {% include end-slide.html %}
+        {% endif %}
       </div>
     </main>
     <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>

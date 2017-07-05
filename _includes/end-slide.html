@@ -1,0 +1,15 @@
+{% assign page_url = site.url | append: page.url %}
+<section>
+  <h2>THANKS !</h2>
+  <h3>THE END</h3>
+  <h4>{{ page.title }}</h4>
+  <h5>
+    <small><a href="{{ page.url | prepend: site.baseurl }}">{{ page_url | remove: "http://" }}</a></small>  
+  </h5>
+  <footer class="links">
+      <a class="link" href="{{ site.baseurl }}">Home(首页)</a>
+      <a class="link" target="_black" href="{{ page.path | prepend: site.github.src }}">Source(源码)</a>
+      <a class="link" target="_black" href="{{ page.path | prepend: site.github.edit }}">Edit(修改)</a>
+      <a class="link" href="/#/">Replay(重放)</a>            
+  </footer>
+ </section>

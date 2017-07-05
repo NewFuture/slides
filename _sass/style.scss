@@ -11,10 +11,10 @@ $qrcode-color: #008;
         width: 200px;
         height: 200px;
         border: 10px $svg-back-color solid;
-        border-radius: 9%;
+        border-radius: 8%;
         background: $svg-back-color;
     }
-    path{
-        fill: $qrcode-color;
-    }
+    // path{
+    //     fill: $qrcode-color;
+    // }
 }
