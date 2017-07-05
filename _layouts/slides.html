@@ -32,7 +32,7 @@ layout: compress
 
     <main class="reveal">
       <div class="slides">
-        {% if site.reveal.title_slide && !page.no_title %}
+        {% if site.reveal.title_slide and page.no_title != true %}
           {% include title-slide.html %}
         {% endif %}
 
@@ -91,7 +91,7 @@ layout: compress
 
         {% endif %}
 
-        {% !page.no_end %}
+        {% if page.no_end != true %}
           {% include end-slide.html %}
         {% endif %}
       </div>
