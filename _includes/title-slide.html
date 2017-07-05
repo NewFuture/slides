@@ -6,7 +6,7 @@
       src="{{ site.baseurl }}/assets/icon/loading.gif" 
       data-src="{{ site.reveal.qrcode | append: page_url }}" 
       alt="{{ page.title }}"/>-->
-      {% remote_include {{ site.reveal.qrcode | append: page_url }} %}
+       {{ site.reveal.qrcode | append: page_url | download | split: '<g id="elements">' | last | prepend: '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="99" height="99"><g>'  }}
     </div>
   {% if page.description %}
     <p>{{ page.description }}</p>
