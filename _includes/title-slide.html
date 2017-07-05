@@ -1,4 +1,5 @@
- {% assign page_url = site.url | append: page.url %}
+{% assign page_url = site.url | append: page.url %}
+{% assign SVG_HEADER = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0,0,99,99"><g>' %}
 <section>
   <h1>{{ page.title }}</h1>
     <div class="qrcode">
@@ -6,7 +7,7 @@
       src="{{ site.baseurl }}/assets/icon/loading.gif" 
       data-src="{{ site.reveal.qrcode | append: page_url }}" 
       alt="{{ page.title }}"/>-->
-       {{ site.reveal.qrcode | append: page_url | download | split: '<g id="elements">' | last | prepend: '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="99" height="99"><g>'  }}
+       {{ site.reveal.qrcode | append: page_url | download | split: '<g id="elements">' | last | replace: ' style="fill:rgb(0, 0, 0)" ', ' ' | prepend: SVG_HEADER }}
     </div>
   {% if page.description %}
     <p>{{ page.description }}</p>

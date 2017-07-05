@@ -1,12 +1,20 @@
+$svg-back-color: #FFF;
+$qrcode-color: #008;
+
 .left{
     text-align: left;
 }
 .qrcode{
     margin: auto;
-    // width: 200px;
-    // height: 200px;
+    img,
     svg{
-        border: 10px white solid;
-        border-radius: 15px;
+        width: 200px;
+        height: 200px;
+        border: 10px $svg-back-color solid;
+        border-radius: 9%;
+        background: $svg-back-color;
+    }
+    path{
+        fill: $qrcode-color;
     }
 }
