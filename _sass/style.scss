@@ -4,20 +4,27 @@ $qrcode-color: #008;
 .left{
     text-align: left;
 }
-.qrcode{
-    margin: auto;
-    img,
-    svg{
-        width: 200px;
-        height: 200px;
-        border: 10px $svg-back-color solid;
-        border-radius: 8%;
-        background: $svg-back-color;
+.slides{
+    .author{
+        color: gray;
     }
-    // path{
-    //     fill: $qrcode-color;
-    // }
+    .qrcode{
+        margin: auto;
+        img,
+        svg{
+            width: 200px;
+            height: 200px;
+            border: 10px $svg-back-color solid;
+            border-radius: 8%;
+            background: $svg-back-color;
+        }
+        // path{
+        //     fill: $qrcode-color;
+        // }
+    }
 }
+
+
 
 .links{
     display: flex;
@@ -27,7 +34,7 @@ $qrcode-color: #008;
         border: 2px solid;
         font-size: .5em;
         padding: 1% 2%;
-        &::hover{
+        &:hover{
             border: white solid;
             color: white;
             font-weight: bolder;

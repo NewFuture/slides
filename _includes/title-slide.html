@@ -12,5 +12,5 @@
   <div>
     <small><a href="{{ page.url | prepend: site.baseurl }}">{{ page_url | remove: "http://" }}</a></small>    
   </div>
-  <small>@<a href="{{ site.author.url }}">{{ site.author.name }}</a></small>  
+  <small><a class="author" href="{{ site.author.url }}">@{{ site.author.name }}</a></small>  
 </section>
