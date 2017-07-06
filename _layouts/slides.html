@@ -99,6 +99,16 @@ layout: compress
     <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
     <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>    
     <script>
+      Reveal.addEventListener( 'ready', function(){
+      head.test(head.desktop&&/print-pdf/gi.test(location.search),
+          [
+            'https://cdn.bootcss.com/reveal.js/3.5.0/css/theme/white.min.css',
+            'https://cdn.bootcss.com/reveal.js/3.5.0/css/print/pdf.min.css'
+          ],
+          [],
+          function(){window.print();location.search=''}
+        )
+      } );
       Reveal.initialize({
         {% if page.height %} height: {{ page.height }}, {% endif %}
         {% if page.width %} width: {{ page.width }}, {% endif %}
