@@ -3,9 +3,13 @@
   <h3>THE END</h3>
   <h2>THANKS</h2>
   <div>
-    <div>{{ page.title }}</div>
-    <small>LINK: <a href="{{ page.url | prepend: site.baseurl }}">{{ page_url }}</a></small>  
-    <small>CODE: <a href="{{ page.path | prepend: site.github.src }}">{{ page.path | prepend: site.github.src }}</a></small>      
+    <p>{{ page.title }}</p>
+    <div>
+      <small>LINK: <a href="{{ page.url | prepend: site.baseurl }}">{{ page_url }}</a></small>       
+    </div>
+    <div>
+      <small>CODE: <a href="{{ page.path | prepend: site.github.src }}">{{ site.github.url }}</a></small>      
+    </div>
   </div>
   <footer class="links">
       <a class="link" href="{{ site.url | append: site.baseurl }}">Home(主页)</a>
