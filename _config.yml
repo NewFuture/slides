@@ -17,7 +17,7 @@ reveal:
 
 github:
   url: https://github.com/NewFuture/slides/
-  edit: https://github.com/NewFuture/slides/blob/edit/edit/
+  edit: https://github.com/NewFuture/slides/edit/edit/
 
 markdown:             kramdown
 kramdown:
