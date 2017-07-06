@@ -27,6 +27,11 @@ $qrcode-color: #008;
         border: 2px solid;
         font-size: .5em;
         padding: 1% 2%;
+        &::hover{
+            border: white solid;
+            color: white;
+            font-weight: bolder;
+        }
     }
 }
 
@@ -34,5 +39,14 @@ $qrcode-color: #008;
 @media print {
     .no-print{
         display: none;
+    }
+}
+
+.desktop-chrome{
+    display: none;
+}
+.desktop.chrome{ 
+    .desktop-chrome{
+        display: initial;
     }
 }

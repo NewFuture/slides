@@ -1,11 +1,11 @@
 Reveal.addEventListener( 'ready', function(){
     head.test(head.desktop&&/print-pdf/gi.test(location.search),
         [
-        '{{ site.reveal.cdn }}css/theme/white.min.css',
-        '{{ site.reveal.cdn }}css/print/pdf.min.css'
+          '{{ site.reveal.cdn }}css/theme/white.min.css',
+          '{{ site.reveal.cdn }}css/print/pdf.min.css'
         ],
         [],
-        function(){window.print(); setTimeout(history.back,1000)}
+        function(){window.print(); setTimeout("history.go(-1)",1500)}
     )
 } );
 Reveal.initialize({
