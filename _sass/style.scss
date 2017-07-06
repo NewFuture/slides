@@ -29,3 +29,10 @@ $qrcode-color: #008;
         padding: 1% 2%;
     }
 }
+
+// 不打印
+@media print {
+    .no-print{
+        display: none;
+    }
+}
