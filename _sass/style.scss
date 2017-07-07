@@ -4,6 +4,9 @@ $qrcode-color: #008;
 .left{
     text-align: left;
 }
+.no-li-style li{
+    list-style: none;
+}
 .slides{
     .author{
         color: gray;
@@ -22,6 +25,11 @@ $qrcode-color: #008;
         //     fill: $qrcode-color;
         // }
     }
+    .end{
+        a{
+            font-size: 90%;
+        }
+    }
 }
 
 
@@ -34,6 +42,7 @@ $qrcode-color: #008;
         border: 2px solid;
         font-size: .5em;
         padding: 1% 2%;
+        margin: .5em;
         &:hover{
             border: white solid;
             color: white;

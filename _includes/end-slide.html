@@ -1,9 +1,9 @@
 {% assign page_url = site.url | append: page.url %}
-<section>
+<section class="end">
   <h3>THE END</h3>
   <h2>THANKS</h2>
-  <p>{{ page.title }}</p>
-  <ul>
+  <p><small>{{ page.title }}</small></p>
+  <ul class="no-li-style">
     <li>
       <small>LINK: <a href="{{ page.url | prepend: site.baseurl }}">{{ page_url }}</a></small>
     </li>
