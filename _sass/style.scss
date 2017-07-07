@@ -26,9 +26,7 @@ $qrcode-color: #008;
         // }
     }
     .end{
-        a{
             font-size: 90%;
-        }
     }
 }
 
@@ -37,6 +35,7 @@ $qrcode-color: #008;
 .links{
     display: flex;
     justify-content: space-around;
+    margin-top: 1em;
     .link{
         border-radius: 5px;
         border: 2px solid;
@@ -44,8 +43,8 @@ $qrcode-color: #008;
         padding: 1% 2%;
         margin: .5em;
         &:hover{
-            border: white solid;
-            color: white;
+            border: wheat solid;
+            color: wheat;
             font-weight: bolder;
         }
     }
