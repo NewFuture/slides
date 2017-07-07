@@ -15,11 +15,12 @@ $qrcode-color: #008;
         margin: auto;
         img,
         svg{
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border: 10px $svg-back-color solid;
             border-radius: 8%;
             background: $svg-back-color;
+            margin: 10px auto;
         }
         // path{
         //     fill: $qrcode-color;
