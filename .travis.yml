@@ -31,9 +31,10 @@ env:
 
 # 可选设置
 #运行Travis的分支
-# branches: 
-#   only: #只build master
-#   - master
+branches: 
+  only: #只build
+  - edit
+  - master
 
 #git clone目录深度
 #clone 目录深度 1 提高速度
