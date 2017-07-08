@@ -26,19 +26,18 @@ layout: compress
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 </head>
 
-  <body>
+<body>
 
     {% assign page_slides = content | split: site.reveal.slide_separator %}
 
     <main class="reveal">
       <div class="slides">
+        {% if site.reveal.title_slide and page.no_title != true %}
+          {% include title-slide.html %}
+        {% endif %}
 
         {% if content contains site.reveal.slide_separator %}
         {% assign page_slides = content | split: site.reveal.slide_separator %}
-
-        {% if site.reveal.title_slide %}
-          {% include title-slide.html %}
-        {% endif %}
 
         {% for slide in page_slides %}
 
@@ -92,44 +91,13 @@ layout: compress
 
         {% endif %}
 
+        {% if page.no_end != true %}
+          {% include end-slide.html %}
+        {% endif %}
       </div>
     </main>
     <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
-    <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>    
-    <script>
-      Reveal.initialize({
-        {% if page.height %} height: {{ page.height }}, {% endif %}
-        {% if page.width %} width: {{ page.width }}, {% endif %}
-        loop: {{ page.loop | default: "false" }},        
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        touch: true,
-        slideNumber: 'c/t',
-        transition: '{{ page.transition | default: "slide" }}', 
-        dependencies: [
-          { src: '{{ "lib/js/classList.js" | prepend: site.reveal.cdn }}', condition: function() { return !document.body.classList; } },
-          /*{ src: '{{ "plugin/zoom-js/zoom.min.js" | prepend: site.reveal.cdn }}', async: true },*/
-          { 
-            src: '{{ "/assets/js/notes.plugin.min.js" | prepend: site.baseurl }}',
-            condition: function() { return head.desktop},            
-            async: true,
-          }
-          {% for plugin in page.plugins %}
-           ,{
-             src: '{{ plugin.src}}',
-             {% if plugin.callback %}
-             callback: {{ plugin.callback }},
-             {% endif %}   
-             {% if plugin.async %}
-             async: true
-             {% endif %}             
-          }
-          {% endfor %}
-        ]
-      });
-    </script>
-
-  </body>
+    <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>
+    <script>{% include slide.js %}</script>
+</body>
 </html>

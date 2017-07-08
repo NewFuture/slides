@@ -1,0 +1,20 @@
+{% assign page_url = site.url | append: page.url %}
+<section class="end">
+  <h3>THE END</h3>
+  <h2>THANKS</h2>
+  <div><small>{{ page.title }}</small></div>
+  <ul class="no-li-style">
+    <li>
+      <small>LINK: <a href="{{ page.url | prepend: site.baseurl }}">{{ page_url }}</a></small>
+    </li>
+    <li>
+      <small>CODE: <a href="{{ page.path | prepend: site.github.src }}">{{ site.github.url }}</a></small>
+    </li>
+  </ul>
+  <footer class="links">
+    <a class="link" href="{{ site.url | append: site.baseurl }}">Home(主页)</a>
+    <a class="link" href="#/">Replay(重放)</a>
+    <a class="link" target="_blank" href="{{ page.path | prepend: site.github.edit }}">Edit(修改)</a>
+    <a class="link desktop-chrome" href="?print-pdf">Print(打印)</a>
+  </footer>
+</section>

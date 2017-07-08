@@ -114,12 +114,34 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
+.posts {
+  .link-title{
+    display: inline-block;
+  }
+  .desc{
+    padding-left: .5em;
+  }
+}
+
 @media (max-width: 48em) {
   .masthead-title {
     text-align: center;
   }
   .masthead-title small {
     display: none;
+  }
+  .posts {
+    .list{
+      text-align: center;
+      padding-bottom: .2em;
+      border-bottom: 1px rgba(0,0,0,.1) solid;
+    }
+    .link-title{
+      display: block;
+    }
+    .desc{
+      padding-left: 0;
+    }
   }
 }
 
@@ -212,6 +234,7 @@ a.sidebar-nav-item:focus {
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
+  z-index: 100;
   top:  .8rem;
   left: 1rem;
   display: block;
@@ -431,110 +454,6 @@ a.pagination-item:hover {
   -webkit-transform: translateX(-14rem);
       -ms-transform: translateX(-14rem);
           transform: translateX(-14rem);
-}
-
-
-/*
- * Themes
- *
- * Apply custom color schemes by adding the appropriate class to the `body`.
- * Based on colors from Base16: http://chriskempson.github.io/base16/#default.
- */
-
-/* Red */
-.theme-base-08 .sidebar,
-.theme-base-08 .sidebar-toggle:active,
-.theme-base-08 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #ac4142;
-}
-.theme-base-08 .container a,
-.theme-base-08 .sidebar-toggle,
-.theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
-}
-
-/* Orange */
-.theme-base-09 .sidebar,
-.theme-base-09 .sidebar-toggle:active,
-.theme-base-09 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #d28445;
-}
-.theme-base-09 .container a,
-.theme-base-09 .sidebar-toggle,
-.theme-base-09 .related-posts li a:hover {
-  color: #d28445;
-}
-
-/* Yellow */
-.theme-base-0a .sidebar,
-.theme-base-0a .sidebar-toggle:active,
-.theme-base-0a #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #f4bf75;
-}
-.theme-base-0a .container a,
-.theme-base-0a .sidebar-toggle,
-.theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
-}
-
-/* Green */
-.theme-base-0b .sidebar,
-.theme-base-0b .sidebar-toggle:active,
-.theme-base-0b #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #90a959;
-}
-.theme-base-0b .container a,
-.theme-base-0b .sidebar-toggle,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
-
-/* Cyan */
-.theme-base-0c .sidebar,
-.theme-base-0c .sidebar-toggle:active,
-.theme-base-0c #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #75b5aa;
-}
-.theme-base-0c .container a,
-.theme-base-0c .sidebar-toggle,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
-
-/* Blue */
-.theme-base-0d .sidebar,
-.theme-base-0d .sidebar-toggle:active,
-.theme-base-0d #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #6a9fb5;
-}
-.theme-base-0d .container a,
-.theme-base-0d .sidebar-toggle,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
-
-/* Magenta */
-.theme-base-0e .sidebar,
-.theme-base-0e .sidebar-toggle:active,
-.theme-base-0e #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #aa759f;
-}
-.theme-base-0e .container a,
-.theme-base-0e .sidebar-toggle,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
-/* Brown */
-.theme-base-0f .sidebar,
-.theme-base-0f .sidebar-toggle:active,
-.theme-base-0f #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #8f5536;
-}
-.theme-base-0f .container a,
-.theme-base-0f .sidebar-toggle,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
 }
 
 

@@ -1,11 +1,16 @@
- {% assign page_url = site.url | append: page.url %}
+{% assign page_url = site.url | append: page.url %}
+{% assign SVG = site.reveal.qrcode | append: page_url | download | remove_first: '<?xml version="1.0" standalone="no"?>' %}
 <section>
   <h1>{{ page.title }}</h1>
-    <div>
-      <img class="qrcode" src="{{ site.baseurl }}/assets/icon/loading.gif" data-src="{{ site.reveal.qrcode }}{{ page_url }}" alt="{{ page.title }}"/>
+    <div class="qrcode">
+      {{ SVG | split: '<!-' | first | replace: 'width="', 'viewBox="0,0,' | replace: '" height="', ',' }}
+      {{ SVG | split: '<g id="elements">' | last | remove: ' style="fill:rgb(0, 0, 0)"' | prepend: '<g>'}}
     </div>
   {% if page.description %}
     <p>{{ page.description }}</p>
   {% endif %}
-  <small><a href="{{ page.url | prepend: site.baseurl }}">{{ page_url | remove: "http://" }}</a></small>
+  <div>
+    <small><a href="{{ page.url | prepend: site.baseurl }}">{{ page_url | remove: "http://" }}</a></small>    
+  </div>
+  <small><a class="author" href="{{ site.author.url }}">@{{ site.author.name }}</a></small>  
 </section>

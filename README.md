@@ -1,8 +1,8 @@
 ## TODO
 
 * [ ] Deploy Environments
-* [ ] Travis build
-* [ ] Last Page
+* [x] Travis build
+* [x] Last Page
 * [ ] Image Replace
 * [ ] Tags
 * [ ] better home page
