@@ -4,6 +4,14 @@ $qrcode-color: #008;
 .left{
     text-align: left;
 }
+
+.no-border{
+    border: none !important;
+}
+.transparent{
+    background: transparent !important;
+}
+
 .no-li-style li{
     list-style: none;
 }
