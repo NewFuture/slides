@@ -42,9 +42,14 @@ layout: compress
       (function (document) {
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
+        var toggle = document.querySelector('.sidebar-toggle');
         document.addEventListener('click', function (e) {
-          if (checkbox.checked && !sidebar.contains(e.target) && e.target !== checkbox)
+          var t=e.target;
+          if (checkbox.checked && !sidebar.contains(t) && t != checkbox)
+          {
             checkbox.checked = false;
+            if(t==toggle) e.preventDefault();          
+          }
         }, false);
       })(document);
     </script>
