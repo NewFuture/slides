@@ -114,12 +114,34 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
+.posts {
+  .link-title{
+    display: inline-block;
+  }
+  .desc{
+    padding-left: .5em;
+  }
+}
+
 @media (max-width: 48em) {
   .masthead-title {
     text-align: center;
   }
   .masthead-title small {
     display: none;
+  }
+  .posts {
+    .list{
+      text-align: center;
+      padding-bottom: .2em;
+      border-bottom: 1px rgba(0,0,0,.1) solid;
+    }
+    .link-title{
+      display: block;
+    }
+    .desc{
+      padding-left: 0;
+    }
   }
 }
 
