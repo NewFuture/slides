@@ -33,7 +33,11 @@ layout: compress
     <main class="reveal">
       <div class="slides">
         {% if site.reveal.title_slide and page.no_title != true %}
-          {% include title-slide.html %}
+          {% if site.safe %}
+            {% include title-slide.safe.html %}
+          {% else %}
+            {% include title-slide.html %}        
+          {% endif %}
         {% endif %}
 
         {% if content contains site.reveal.slide_separator %}
