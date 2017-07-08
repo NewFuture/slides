@@ -1,11 +1,11 @@
 ## TODO
 
-* [ ] Deploy Environments
+* [x] gh-page compatible
 * [x] Travis build
 * [x] Last Page
 * [ ] Image Replace
 * [ ] Tags
-* [ ] better home page
+* [x] better home page
 
 ## THANKS TO:
 
