@@ -1,76 +1,82 @@
-$svg-back-color: #FFF;
+$svg-back-color: #fff;
 $qrcode-color: #008;
 
-.left{
-    text-align: left;
+.left {
+  text-align: left;
 }
 
-.no-border{
-    border: none !important;
-}
-.transparent{
-    background: transparent !important;
+.no-border {
+  border: 0 !important;
 }
 
-.no-li-style li{
-    list-style: none;
+.transparent {
+  background: transparent !important;
 }
-.slides{
-    .author{
-        color: gray;
+
+.no-li-style li {
+  list-style: none;
+}
+
+.slides {
+  .author {
+    color: gray;
+  }
+
+  .qrcode {
+    margin: auto;
+
+    img,
+    svg {
+      width: 180px;
+      height: 180px;
+      border: 10px $svg-back-color solid;
+      border-radius: 8%;
+      background: $svg-back-color;
+      margin: 10px auto;
     }
-    .qrcode{
-        margin: auto;
-        img,
-        svg{
-            width: 180px;
-            height: 180px;
-            border: 10px $svg-back-color solid;
-            border-radius: 8%;
-            background: $svg-back-color;
-            margin: 10px auto;
-        }
-        // path{
-        //     fill: $qrcode-color;
-        // }
-    }
-    .end{
-            font-size: 90%;
-    }
+    // path{
+    //     fill: $qrcode-color;
+    // }
+  }
+
+  .end {
+    font-size: 90%;
+  }
 }
 
+.links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
 
+  .link {
+    border-radius: 5px;
+    border: 2px solid;
+    font-size: .5em;
+    padding: 1% 2%;
+    margin: 1em;
 
-.links{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1em;
-    .link{
-        border-radius: 5px;
-        border: 2px solid;
-        font-size: .5em;
-        padding: 1% 2%;
-        margin: .5em;
-        &:hover{
-            border: wheat solid;
-            color: wheat;
-            font-weight: bolder;
-        }
+    &:hover {
+      border: wheat solid;
+      color: wheat;
+      font-weight: bolder;
     }
+  }
 }
 
 // 不打印
 @media print {
-    .no-print{
-        display: none;
-    }
+  .no-print {
+    display: none;
+  }
 }
 
-.desktop-chrome{
-    display: none;
+.desktop-chrome {
+  display: none;
 }
-.desktop.chrome{ 
-    .desktop-chrome{
-        display: initial;
-    }
+
+.desktop.chrome {
+  .desktop-chrome {
+    display: initial;
+  }
 }
