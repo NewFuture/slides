@@ -11,6 +11,7 @@ layout: compress
   <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
   <link href="{{ site.baseurl }}/assets/css/slide.css" rel="stylesheet">
   <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.description %}
   <meta name="description" content="{{ page.description }}"/>
   {% endif %}
@@ -18,13 +19,13 @@ layout: compress
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="full-screen" content="yes">
   <meta name="browsermode" content="application">
-  <meta name="x5-fullscreen" content="true">
+  <meta name="screen-orientation" content="landscape">
+  <meta name="x5-orientation" content="landscape">
   <meta name="x5-page-mode" content="app">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="HandheldFriendly" content="true"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
+  <meta name="HandheldFriendly" content="true">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 </head>
 
