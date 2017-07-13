@@ -7,8 +7,8 @@ rvm: 2.2
 # dist: trusty (Ubuntu 16.04)
 
 install:
-  - gem install jekyll -v 3.4
-  - gem install jekyll-redirect-from
+  - gem install -q -f jekyll
+  - gem install -q -f jekyll-redirect-from
 
 # 下面替换成运行生成命令或者脚本
 script:
