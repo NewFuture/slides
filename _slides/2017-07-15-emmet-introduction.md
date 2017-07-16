@@ -20,7 +20,7 @@ redirect_from:
 
 前身`Zen Coding`
 
-像jQuery一样写HTML和CSS, 减少 <kbd>复制</kbd><kbd>粘贴</kbd>
+像jQuery一样写HTML,CSS;减少<kbd>复制</kbd>/<kbd>粘贴</kbd>
 
 ~~
 
@@ -244,13 +244,25 @@ div#header
 ```html
 <div id="header"></div>
 ```
+
 `div`是默认标签,此处可以省略div,结果一样
 ```css
 #header
 ```
-可结合上文自动选择缺省标签(`span`,`li`,`tr`和`td`)
+```html
+<div id="header"></div>
+```
 
-如省去li效果一样
+~~
+### 缺省标签
+emmet会结合上文自动选择缺省标签
+
+* `div` 默认 
+* `span` 不能使用div的时候
+* `li` 在 ul和ol后面
+* `tr`和`td` 在 table后
+
+如省变量中的栗子,去li效果一样
 ```css
 ul>#list_$*3
 ```
@@ -292,7 +304,7 @@ link[href="style.css"]
 ```
 
 多个属性可以同时使用
-```
+```css
 img.logo[src="logo.svg"][title="LOGO"]
 ```
 ```html
@@ -327,7 +339,7 @@ ul>li{item$}*3
 
 ![](https://pawelgrzybek.com/photos/2015-10-17-3.gif)
 
->大部分复制粘贴的内容都是可以省掉的!
+>大部分复制粘贴都是可以省掉的!
 
 ~~
 
