@@ -16,11 +16,11 @@ redirect_from:
 
 ![](https://emmet.io/-/4076541266/i/logo.svg){: .no-border .transparent}
 
->必备前端开发插件
+>一个提高前端开发生产力的插件
 
 前身`Zen Coding`
 
-像jQuery一样写HTML,CSS;减少<kbd>复制</kbd>/<kbd>粘贴</kbd>
+像jQuery一样写HTML/CSS;减少<kbd>复制</kbd>和<kbd>粘贴</kbd>
 
 ~~
 
@@ -54,8 +54,7 @@ redirect_from:
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    
+<body>    
 </body>
 </html>
 ```
@@ -276,11 +275,10 @@ ul>#list_$*3
 
 ~~
 ### `.` class
-和css中一样`.`表示class,同样支持缺省自动补全
+和css中一样`.`表示class
 ```css
 button.btn
 ```
-展开成HTML
 ```html
 <button class="btn"></button>
 ```
@@ -295,17 +293,18 @@ button.btn
 
 ~~
 ### `[]`自定义属性
+和css中一样`[]`表示属性
 ```css
 link[href="style.css"]
 ```
-展开成HTML
 ```html
 <link rel="stylesheet" href="style.css" />
 ```
 
-多个属性可以同时使用
+多个属性可以同时使用,支持两种写法
 ```css
 img.logo[src="logo.svg"][title="LOGO"]
+img.logo[src="logo.svg" title="LOGO"]
 ```
 ```html
 <img src="logo.svg" alt="" class="logo" title="LOGO" />
@@ -317,7 +316,6 @@ img.logo[src="logo.svg"][title="LOGO"]
 ```css
 .Btn{发送}
 ```
-展开成HTML
 ```html
 <div class="Btn">发送</div>
 ```
@@ -337,9 +335,10 @@ ul>li{item$}*3
 
 ## Emmet + BEM规范
 
+>大部分重复内容都是可以省掉的!
+
 ![](https://pawelgrzybek.com/photos/2015-10-17-3.gif)
 
->大部分复制粘贴都是可以省掉的!
 
 ~~
 
@@ -376,3 +375,19 @@ header.Navbar._top+main.CardList+footer.fixed-bottom
 (.Card>.-head.UserBar>img.-avatar+.-name{NewFuture}+.-info{intern}+.-follow{+关注}^.-content{hello world!}+.-bottom>.-time+.-up+.-comment)*5
 .Input>input.-text+.Icon>button.-pen
 ```
+
+---
+## 总结符号表
+
+| 符号  |  `#`* | `.` * | `[` * `]`  |  `{` * `}` |
+|------|-------|-------|------------|------------|
+| 说明  |   ID  | class |  自定义属性 |  内容    |  
+
+
+| 符号  |  *`>`* | *`+`\* | *`^`\*  |  `(` * `)` |
+|------|-------|-------|------------|------------|
+| 说明  |  包含  | 并列 |  上一级   |  分组   |  
+
+| 符号  |  `*` |  `$` | `@` |
+|------|-------|-------|------------|
+| 说明  |  复制 | 循环变量 |  起始值   |
