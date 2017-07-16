@@ -9,31 +9,34 @@ tags: ["CSS","MS","front-end","guide"]
 redirect_from: 
   - "/Emmet简介/"
   - "/Emmet简介"
-  - "/emmet"
+  - "/emmet-introduction"
 ---
 
 ## Emmet
 
->必备的高效前端开发插件
-
 ![](https://emmet.io/-/4076541266/i/logo.svg){: .no-border .transparent}
+
+>必备前端开发插件
 
 前身`Zen Coding`
 
-不止像jQuery一样写HTML和CSS
+像jQuery一样写HTML和CSS, 减少 <kbd>复制</kbd><kbd>粘贴</kbd>
 
 ~~
 
 ### 目录
 
-* 缩写
-* 层级
-* 重复
-* 属性
-* BEM
+* [缩写](#/2)
+* [层级](#/3)
+* [重复](#/4)
+* [属性](#/5)
+* [BEM](#/6)
 
 ----------------------------------------------------------------
 ## HTML缩写
+![](https://www.smashingmagazine.com/wp-content/uploads/2013/03/initializers.gif)
+
+简单快速书写html和css
 
 ~~
 
@@ -62,10 +65,10 @@ redirect_from:
 
 ### 缩写规则
 
-`tag:atrr` 冒号分割
+`tag:attr` 冒号分割
 
 如生成邮件链接
-```
+```css
 a:mail
 ```
 
@@ -73,7 +76,12 @@ a:mail
 <a href="mailto:"></a>
 ```
 
-速查表: <https://docs.emmet.io/cheat-sheet/>
+~~
+### MORE
+
+完整的缩写手册和CSS缩写
+
+参考速查表: <https://docs.emmet.io/cheat-sheet/>
 
 ----------------------------------------------------------------
 ## 层级关系
@@ -91,7 +99,7 @@ a:mail
 ```css
 nav>ul>li>a
 ```
-转成HTML
+展开成HTML
 ```html
 <nav>
     <ul>
@@ -107,7 +115,7 @@ nav>ul>li>a
 ```css
 article>h1+section+section
 ```
-转成HTML
+展开成HTML
 ```html
 <article>
     <h1></h1>
@@ -193,7 +201,6 @@ ul>li#list_$$$$*2
 ~~
 ### `@` 起始
 
-`@-`倒序
 ```css
 ul>li#list_$@-*3
 ```
@@ -204,7 +211,7 @@ ul>li#list_$@-*3
     <li id="list_1"></li>
 </ul>
 ```
-`@n`从n开始计数
+`@-`表示倒序,`@n`从n计数
 ```css
 ul>li#list_$@*2^ul>li#list_$@3*3
 ```
@@ -230,7 +237,7 @@ ul>li#list_$@*2^ul>li#list_$@3*3
 
 ~~
 ### `#`id
-和css中一样#表示ID选择器
+和css中一样#表示ID
 ```css
 div#header
 ```
@@ -238,14 +245,15 @@ div#header
 <div id="header"></div>
 ```
 `div`是默认标签,此处可以省略div,结果一样
-```
+```css
 #header
 ```
-emmet会更具剩下文，自动选择缺省标签(`span`,`li`,`tr`和`td`)
-```
+可结合上文自动选择缺省标签(`span`,`li`,`tr`和`td`)
+
+如省去li效果一样
+```css
 ul>#list_$*3
 ```
-省去li效果一样
 ```html
 <ul>
     <li id="list_1"></li>
@@ -256,11 +264,11 @@ ul>#list_$*3
 
 ~~
 ### `.` class
-和css中一样`.`表示class选择器
+和css中一样`.`表示class,同样支持缺省自动补全
 ```css
 button.btn
 ```
-转成HTML
+展开成HTML
 ```html
 <button class="btn"></button>
 ```
@@ -278,7 +286,7 @@ button.btn
 ```css
 link[href="style.css"]
 ```
-转成HTML
+展开成HTML
 ```html
 <link rel="stylesheet" href="style.css" />
 ```
@@ -294,10 +302,32 @@ img.logo[src="logo.svg"][title="LOGO"]
 ~~
 ### `{}`内容
 
+```css
+.Btn{发送}
+```
+展开成HTML
+```html
+<div class="Btn">发送</div>
+```
+结合变量的栗子
+```css
+ul>li{item$}*3
+```
+```html
+<ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+</ul>
+```
 
 ----------------------------------------------------------------
 
 ## Emmet + BEM规范
+
+![](https://pawelgrzybek.com/photos/2015-10-17-3.gif)
+
+>大部分复制粘贴的内容都是可以省掉的!
 
 ~~
 
@@ -322,13 +352,15 @@ img.logo[src="logo.svg"][title="LOGO"]
 ```
 
 ~~
-### 页面速写
+### DEMO
+
+5行速成写页面
 
 ```css
 !
+link[href="http://style.chinacloudsites.cn/preview/dist/css/style.min.css"]
 header.Navbar._top+main.CardList+footer.fixed-bottom
 (.Nav>a.-link)*2
 (.Card>.-head.UserBar>img.-avatar+.-name{NewFuture}+.-info{intern}+.-follow{+关注}^.-content{hello world!}+.-bottom>.-time+.-up+.-comment)*5
 .Input>input.-text+.Icon>button.-pen
 ```
-
