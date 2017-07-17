@@ -108,7 +108,13 @@
         </span><span class="nt">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh"</span><span class="w">
     </span><span class="p">}</span><span class="w"> 
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></section><section><h3 id="demo">DEMO</h3><p>5行速成写页面</p><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">!</span>
+</span></code></pre></div></section><section><h3 id="组件class自动补全">组件class自动补全</h3><ul><li>modifier自动补全组件名称<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.Navbar._top</span>
+</code></pre></div><p>```html</p></li></ul><div class="Navbar Navbar_top"></div><div class="highlighter-rouge"><pre class="highlight"><code>
+* 自动补全父级组件元素
+```css
+.Nav&gt;a.-link
+</code></pre></div><div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Nav"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"Nav-link"</span><span class="nt">&gt;&lt;/a&gt;&lt;/div&gt;</span>
+</code></pre></div></section><section><h3 id="demo">DEMO</h3><p>HTML速写</p><div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">!</span>
 <span class="nt">link</span><span class="o">[</span><span class="nt">href</span><span class="o">=</span><span class="s1">"http://style.chinacloudsites.cn/preview/dist/css/style.min.css"</span><span class="o">]</span>
 <span class="nt">header</span><span class="nc">.Navbar._top</span><span class="o">+</span><span class="nt">main</span><span class="nc">.CardList</span><span class="o">+</span><span class="nt">footer</span><span class="nc">.fixed-bottom</span>
 <span class="o">(</span><span class="nc">.Nav</span><span class="o">&gt;</span><span class="nt">a</span><span class="nc">.-link</span><span class="o">)*</span><span class="nt">2</span>
