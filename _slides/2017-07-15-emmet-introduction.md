@@ -93,7 +93,7 @@ a:mail
 ~~
 ### `>` 子级
 
-和CSS中一样,`>`表示子元素
+和CSS中一样,>表示子元素
 
 ```css
 nav>ul>li>a
@@ -109,7 +109,7 @@ nav>ul>li>a
 
 ~~
 ### `+` 同级
-和CSS中一样,`+`表示同级元素
+和CSS中一样,+表示同级元素
 
 ```css
 article>h1+section+section
@@ -254,14 +254,14 @@ div#header
 
 ~~
 ### 缺省标签
-emmet会结合上文自动选择缺省标签
+emmet会结合上文自动选择缺省标签:
 
 * `div` 默认 
 * `span` 不能使用div的时候
 * `li` 在 ul和ol后面
 * `tr`和`td` 在 table后
 
-如省变量中的栗子,去li效果一样
+如前面变量中的栗子,去li效果一样
 ```css
 ul>#list_$*3
 ```
@@ -365,17 +365,21 @@ ul>li{item$}*3
 ~~
 ### 组件class自动补全
 * modifier自动补全组件名称
+
 ```css
 .Navbar._top
 ```
+
 ```html
 <div class="Navbar Navbar_top"></div>
 ```
 
 * 自动补全父级组件元素
+
 ```css
 .Nav>a.-link
 ```
+
 ```html
 <div class="Nav"><a href="" class="Nav-link"></a></div>
 ```
@@ -404,11 +408,11 @@ header.Navbar._top+main.CardList+footer.fixed-bottom
 
 | 符号  |\*`>`\* |\*`+`\*| \*`^`\* | `(`\*`)` |
 |:-----|:------:|:------:|:------:|:------:|
-| 说明  |  包含  | 并列 |  上一级   |  分组   |  
+| 说明  |  包含  | 并列 |  返回一级  |  分组   |  
 {:.left10}
 
 | 符号  |  `*` |  `$` | `@` |
 |:-----|:-----:|:-----:|:-----:|
-| 说明  |  复制 |循环变量|起始值|
+| 说明  | 批量复制 |循环变量|起始值|
 {:.left10}
 
