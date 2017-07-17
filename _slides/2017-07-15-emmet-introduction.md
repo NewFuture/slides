@@ -363,9 +363,27 @@ ul>li{item$}*3
 ```
 
 ~~
+### 组件class自动补全
+* modifier自动补全组件名称
+```css
+.Navbar._top
+```
+```html
+<div class="Navbar Navbar_top"></div>
+```
+
+* 自动补全父级组件元素
+```css
+.Nav>a.-link
+```
+```html
+<div class="Nav"><a href="" class="Nav-link"></a></div>
+```
+
+~~
 ### DEMO
 
-5行速成写页面
+HTML速写
 
 ```css
 !
@@ -376,7 +394,7 @@ header.Navbar._top+main.CardList+footer.fixed-bottom
 .Input>input.-text+.Icon>button.-pen
 ```
 
----
+----------------------------------------------------------------
 ## 总结符号表
 
 | 符号  |  `#`* | `.` * | `[`\*`]`  |  `{`\*`}` |
