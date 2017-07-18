@@ -367,11 +367,11 @@ ul>li{item$}*3
 * modifier自动补全组件名称
 
 ```css
-.Navbar._top
+.NavBar._top
 ```
 
 ```html
-<div class="Navbar Navbar_top"></div>
+<div class="NavBar NavBar_top"></div>
 ```
 
 * 自动补全父级组件元素
@@ -391,11 +391,16 @@ HTML速写
 
 ```css
 !
-link[href="http://style.chinacloudsites.cn/preview/dist/css/style.min.css"]
-header.Navbar._top+main.CardList+footer.fixed-bottom
-(.Nav>a.-link)*2
-(.Card>.-head.UserBar>img.-avatar+.-name{NewFuture}+.-info{intern}+.-follow{+关注}^.-content{hello world!}+.-bottom>.-time+.-up+.-comment)*5
-.Input>input.-text+.Icon>button.-pen
+link[href=https://style.chinacloudsites.cn/preview/dist/blog/css/blog.css]
+header.NavBar._top+main
+(nav.Nav>a.-link)*2
+.PostCard>.-user+.-content>p.-text{hello}+ul.-imgList^.-status>.-time+.-like+.-comment
+.UserBar>img.-avatar+.-info>.-name{NewFuture}+.-title{intern}^.-follow
+
+botton.Btn.is-inverse{+ 关注}
+(.PostCard-img>img[src=https://avatars6.githubusercontent.com/u/6290356?v=400])*3
+
+.PostCard>(.-user.UserBar>img.-avatar+.-info>.-name{NewFuture}+.-title{intern}^.-follow>botton.Btn.is-inverse{+ 关注})+.-content>p.-text{hello}+ul.-imgList^.-status>.-time+.-like+.-comment
 ```
 
 ----------------------------------------------------------------
