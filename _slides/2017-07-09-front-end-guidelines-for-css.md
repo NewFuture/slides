@@ -24,23 +24,29 @@ redirect_from:
 ----------------------------------------------------------------
 ## 基本思想
 
+![](/assets/img/front-end-guidelines-for-css/page.png){:.no-border}
+
 **数据模型** -- **样式模块** -- **视图结构**
 
-![](/assets/img/front-end-guidelines-for-css/page.png)
+Notes:
 
 三者间形成统一认识和一致信息传递
+
+PPT-->网页
 
 ~~
 ### 参考原则 References
 
+
 * 命名规范参考 `BEM` 和 `SUITCSS`
 * 代码管理和组件设计参考 `Bootstrap`
+
 
 <small> 站在巨人的肩膀上 </small>
 
 
 ----------------------------------------------------------------
-## CSS Utility 工具类
+## Utility 工具类
 
 单一的基础元素或者结构
 
@@ -49,9 +55,11 @@ redirect_from:
 如文字排版,特殊样式
 
 ~~
-### 命名 Utilities naming conventions
+### 工具命名 
 
-```
+#### Utilities naming conventions
+
+```css
 utilityName[-propertyName]
 ```
 
@@ -59,7 +67,8 @@ utilityName[-propertyName]
 
 ~~
 ### examples:
-例如文字(txt)控制
+
+文字(txt)控制
 
 ```html
 <!-- 高亮突出 -->
@@ -71,9 +80,8 @@ utilityName[-propertyName]
 
 
 ----------------------------------------------------------------
-## Component Utility 组件类
+## Component 组件类
 
-一个页面由多个组件和组合或嵌套组成
 
 一个组件包含
 
@@ -82,26 +90,32 @@ utilityName[-propertyName]
 * 组件样式(修或者主题)
 * 组件状态
 
+Notes:
+
+一个页面由多个组件和组合或嵌套组成
+
 ~~
-### 命名 Components naming conventions
+### 组件命名 
+
+#### Components naming conventions
 
 * ComponentName
 * ComponentName-descendentName
 * ComponentName_modifierName
 * ComponentName.is-stateOfComponent
-* ComponentName-descendentName_modifierName (不常用)
+* <small>ComponentName-descendentName_modifierName</small>
 
 ~~
 ### 命名说明
 
+* class都以组件名开头
 * 组件名称大写驼峰，其他小写驼峰
-* 都以组件名开头
 * 短线`-`连接组件与子元素(或者子模块) 最多一层
 * 下划线`_`连接修饰(特殊样式)
 * `is-*`标明特殊状态(可动态切换)
 
 ~~
-### ComponentName-descendentName
+#### ComponentName-descendentName {:.no-transform}
 
 例如导航(Nav)模块
 ```html
@@ -112,7 +126,7 @@ utilityName[-propertyName]
 ```
 
 ~~
-### ComponentName_modifierName
+#### ComponentName_modifierName {:.no-transform}
 
 如导航条(NavBar)
 ```html
@@ -124,7 +138,7 @@ utilityName[-propertyName]
 ```
 
 ~~
-### ComponentName.is-stateOfComponent
+#### ComponentName.is-stateOfComponent {:.no-transform}
 
 如按钮(Btn)状态切换
 ```html
@@ -146,10 +160,16 @@ utilityName[-propertyName]
 
 直接在项目中link一行css文件即可
 
-* 开发阶段 `<link rel="stylesheet" href="https://style.chinacloudsites.cn/preview/dist/css/style.css?"/>`{:.lang-html}
-* 上线切换 `<link rel="stylesheet" href="//CDN-NAME/xx.min.css"/>`{:.lang-html}
+* 开发阶段 
+```html
+<link rel="stylesheet" href="https://style.chinacloudsites.cn/preview/dist/css/style.css?"/>
+```
+* 上线切换 
+```html
+<link rel="stylesheet" href="//CDN-NAME/xx.min.css"/>
+```
 
-(开发阶段,样式库提交后会自动编译并发布到预览网站)
+(样式库提交后,自动编译更新到预览站点)
 
 ~~
 ### 测试预览和组件文档
@@ -158,12 +178,12 @@ utilityName[-propertyName]
 
 * 组件是否可用?
 * 效果是否正常?
-* 组件如何命名和使用?
+* 如何命名和使用?
 
 ~~
 ### TODO
 
-* 统一图标库(iconFont)
+* 统一图标库(IconFont)
 * 确定布局标准
 * 自动构建和管理工具
 * 版本和Release管理
