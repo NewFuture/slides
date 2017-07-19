@@ -1,15 +1,15 @@
 ---
-title: 样式表规范草案
-description: The CSS Guidelines for ShenNong Team Front End
+title: 样式库和规范
+description: The CSS Library and Guidelines for ShenNong Team
 lang: zh
 transition: slide
 theme: black
 category: FE
 tags: ["CSS","MS","front-end","guide"]
 redirect_from: 
-  - "/前端规范之样式表/"
-  - "/前端规范之样式表"
-  - "/front-end-guidelines-for-css"
+  - "/样式库和规范/"
+  - "/样式库和规范"
+  - "/the-css-library-and-guideliness"
 ---
 
 ## 目录
@@ -163,15 +163,14 @@ Notes:
 
 直接在项目中link一行css文件即可
 
-* 开发阶段 
-
 ```html
-<link rel="stylesheet" href="https://style.chinacloudsites.cn/preview/dist/css/style.css?"/>
+<!--开发阶段使用样式库(实时更新)-->
+<link href="https://style.chinacloudsites.cn/preview/dist/css/style.css?" rel="stylesheet"/>
 ```
-* 上线切换 
 
 ```html
-<link rel="stylesheet" href="//CDN-NAME/xx.min.css"/>
+<!-- 上线发布后切换为优化版 -->
+<link href="//CDN-NAME/{project-name}.min.css" rel="stylesheet"/>
 ```
 
 (样式库提交后,自动编译更新到预览站点)
