@@ -59,9 +59,9 @@ PPT-->网页
 
 #### Utilities naming conventions
 
-```css
-utilityName[-propertyName]
-```
+>```css
+>utilityName[-propertyName]
+>```
 
 小写驼峰工具分类-小写驼峰工具属性
 
@@ -163,9 +163,8 @@ Notes:
 ![](https://www.smashingmagazine.com/wp-content/uploads/2017/06/mrh_CSS_grid_fig_09-large-opt.png)
 
 ~~
-### current
+### 目前涉及的布局方案
 
-目前涉及的布局方案
 ![](/assets/img/2017-07-09/layout-phone.jpg)
 
 
