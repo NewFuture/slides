@@ -24,7 +24,7 @@ redirect_from:
 ----------------------------------------------------------------
 ## 基本思想
 
-![](/assets/img/front-end-guidelines-for-css/page.png){:.no-border}
+![](/assets/img/2017-07-09/page.png){:.no-border}
 
 **数据模型** -- **样式模块** -- **视图结构**
 
@@ -156,6 +156,18 @@ Notes:
 ----------------------------------------------------------------
 ## Layout 布局
 
+![](http://matthewjamestaylor.com/demos/ipad-css-layout/ipad-layout-dimensions.gif)
+
+~~
+### 响应式
+![](https://www.smashingmagazine.com/wp-content/uploads/2017/06/mrh_CSS_grid_fig_09-large-opt.png)
+
+~~
+### current
+
+目前涉及的布局方案
+![](/assets/img/2017-07-09/layout-phone.jpg)
+
 
 
 ----------------------------------------------------------------
@@ -188,6 +200,6 @@ Notes:
 ### TODO
 
 * 统一图标库(IconFont)
-* 确定布局标准
+* 确定布局(layout)标准
 * 自动构建和管理工具
 * 版本和Release管理
