@@ -115,7 +115,8 @@ Notes:
 * `is-*`标明特殊状态(可动态切换)
 
 ~~
-#### ComponentName-descendentName {:.no-transform}
+#### ComponentName-descendentName
+{:.no-transform}
 
 例如导航(Nav)模块
 ```html
@@ -126,7 +127,8 @@ Notes:
 ```
 
 ~~
-#### ComponentName_modifierName {:.no-transform}
+#### ComponentName_modifierName
+{:.no-transform}
 
 如导航条(NavBar)
 ```html
@@ -138,7 +140,8 @@ Notes:
 ```
 
 ~~
-#### ComponentName.is-stateOfComponent {:.no-transform}
+#### ComponentName.is-stateOfComponent
+{:.no-transform}
 
 如按钮(Btn)状态切换
 ```html
@@ -161,10 +164,12 @@ Notes:
 直接在项目中link一行css文件即可
 
 * 开发阶段 
+
 ```html
 <link rel="stylesheet" href="https://style.chinacloudsites.cn/preview/dist/css/style.css?"/>
 ```
 * 上线切换 
+
 ```html
 <link rel="stylesheet" href="//CDN-NAME/xx.min.css"/>
 ```
