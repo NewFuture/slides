@@ -20,6 +20,6 @@ building
 ----------------------------------------------------------------------------
 ### build automation
 
-![](/assets/img/2017-08-28/build.svg){: .no-border .transparent}
+![](/assets/img/2017-08-28/build.png)
 
 
