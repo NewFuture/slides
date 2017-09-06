@@ -63,7 +63,7 @@ code ==> git ==> build (test) ==> deploy
 
 continuous integration
 
-= `build automation` + `code review` + more
+= `build automation` + `code review` + `deploy automation` + more
 
 ~~
 
