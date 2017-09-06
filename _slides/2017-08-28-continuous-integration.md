@@ -46,7 +46,7 @@ code ==> git ==> build (test) ==> deploy
 ~~
 ### 以更新此slides为例
 
-1. [修改代码](https://github.com/NewFuture/slides/edit/edit/_slides/2017-08-28-continuous-integration.md)(手动)
+1. [修改代码!](https://github.com/NewFuture/slides/edit/edit/_slides/2017-08-28-continuous-integration.md)(手动)
 2. [提交代码(commit & push)](https://github.com/NewFuture/slides/commits/edit)
 3. github 触发webhook 通知 Travis-CI
 4. Travis-CI 下载edit分支代码根据配置(`.travis.yml`)自动编译
