@@ -1,6 +1,6 @@
 ---
 title: 持续集成
-description: building...
+description: Build Automation & Continuous Integration
 lang: zh
 transition: slide
 theme: black
@@ -86,3 +86,6 @@ continuous integration
 ### github pull request
 
 ![](/assets/img/2017-08-28/github_pr.png)
+
+----------------------------------------------------------------------------
+## 代码管理方案
