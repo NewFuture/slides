@@ -24,7 +24,11 @@ redirect_from:
 
 
 ---------------------------------------------------------------------------
-## build automation
+## 自动构建
+
+build automation
+
+~~
 
 ![](/assets/img/2017-08-28/build.png)
 
@@ -53,3 +57,32 @@ code ==> git ==> build (test) ==> deploy
 ### slides update flow
 
 ![](/assets/img/2017-08-28/buildslides.png)
+
+----------------------------------------------------------------------------
+## 持续集成
+
+continuous integration
+
+= `build automation` + `code review` + more
+
+~~
+
+### work flow
+
+![](/assets/img/2017-08-28/ci_flow.png)
+
+(两次build 一次 deploy)
+
+~~
+### 开源方案（Github）
+
+ * `fork` 复制代码库
+ * `pull request` 提交PR
+ * `check` CI检查和review等
+ * `merge` 合并代码
+ * new version or deploy 构建新版本
+
+~~
+### github pull request
+
+![](/assets/img/2017-08-28/github_pr.png)
