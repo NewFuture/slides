@@ -116,4 +116,4 @@ Visual Studio Team Service
 
 * 生产 <https://dgonebox7.live.com/>
 * 测试 <https://style.chinacloudsites.cn/>
-* 代码 <https://shennong.visualstudio.com/SNFrontend/_home>
+* [代码](https://shennong.visualstudio.com/SNFrontend/_home)
