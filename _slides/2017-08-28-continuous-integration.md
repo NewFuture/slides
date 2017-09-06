@@ -77,9 +77,9 @@ continuous integration
 ### 开源方案（Github）
 
  * `fork` 复制代码库
- * `pull request` 提交PR
+ * `pull request` 提交PR, webhook触发CI
  * `check` CI检查和review等
- * `merge` 合并代码
+ * `merge` 合并代码(删除源分支)
  * new version or deploy 构建新版本
 
 ~~
@@ -88,4 +88,32 @@ continuous integration
 ![](/assets/img/2017-08-28/github_pr.png)
 
 ----------------------------------------------------------------------------
+## VSTeam 方案
+
+Visual Studio Team Service
+
+`VSTS GIT` + `VSTS builds` + `VSTS release` + `Azure`
+
+1. 实时构建和更新
+2. coder 无需部署环境的访问权限
+
+------------------------
 ## 代码管理方案
+
+* `master`(readonly) 生产环境代码
+* `dev`(readonly) 开发环境集成代码
+* `dev-*`(单人)或者`feature-*`(多人) 开发分支
+
+
+~~
+
+![](/assets/img/2017-08-28/code_flow.png)
+
+
+~~ 
+
+### style 库管理方案
+
+* 生产 <https://dgonebox7.live.com/>
+* 测试 <https://style.chinacloudsites.cn/>
+* 代码 <https://shennong.visualstudio.com/SNFrontend/_home>
