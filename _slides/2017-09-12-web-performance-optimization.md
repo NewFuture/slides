@@ -135,3 +135,11 @@ redirect_from:
 4. 设置 `ETag` 和 `Expires` 头
 5. CDN 使用单独域名,无cookie 
 6. 配置优化HTTPS (算法选择，简化握手)
+
+-----
+## 性能分析工具
+
+* 网页性能分析[PageSpeed](https://developers.google.com/speed/pagespeed/)
+* 网站分析[YSlow](http://yslow.org/)
+* Webpack JS依赖和体积分析[webpack-chart](http://alexkuz.github.io/webpack-chart/)或[webpack analyse](http://webpack.github.io/analyse/)
+* Chrome 调试工具: [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/) 和 Audits
