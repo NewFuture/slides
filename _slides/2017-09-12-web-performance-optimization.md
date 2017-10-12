@@ -121,7 +121,7 @@ redirect_from:
 1. 文件 **压缩** 和 **打包** (<200K最佳,不要超过500K)
 2. JS尽量 **减少库依赖** 和 分离css
 3. CSS 避免使用 `import` 和 `计算表达式`
-4. css放head,js在body结前,考虑异步和延迟加载
+4. css放head,js在`</body>`,考虑异步或延迟
 5. HTML和CSS 尽量**减少DOM嵌套层次**,规范语法
 6. 避免使用 `iframe` 和 `cookie`
 
