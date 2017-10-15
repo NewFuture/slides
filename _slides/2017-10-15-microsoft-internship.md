@@ -1,5 +1,5 @@
 ---
-title: 
+title: 微软实习总结
 description: Internship In MicroSoft
 lang: zh
 transition: slide
@@ -7,8 +7,8 @@ theme: black
 width: 1280
 height: 720
 redirect_from:
-  - "//"
-  - "/"  
+  - "/微软实习总结/"
+  - "/微软实习总结"  
   - "/microsoft-internship"
 ---
 
