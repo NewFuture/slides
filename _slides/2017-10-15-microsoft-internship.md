@@ -1,6 +1,6 @@
 ---
 title: 微软实习总结
-description: my Internship in Microsoft
+description: My Internship in Microsoft
 lang: zh
 transition: slide
 theme: black
@@ -110,12 +110,12 @@ MSRA 实习主要渠道渠道:
 ~~
 ### 功能
 
-* 图片分类
-* 图片截取和摆正
-* 表格识别
-* 文字识别(OCR)
-* 文本框单元格还原
-* 文字擦除背景重绘
+1. 图片分类
+2. 图片截取和摆正
+3. 表格识别
+4. 文字识别(OCR)
+5. 文本框单元格还原
+6. 文字擦除背景重绘
 
 ----
 ## 找工作和实习
@@ -127,4 +127,4 @@ MSRA 实习主要渠道渠道:
 * 系统复习
   * 基础知识(数据结构,算法,网络,数据库,语言等)
   * 刷题提供反应速度
-* 积累经验 
+* 积累经验
