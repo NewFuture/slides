@@ -90,7 +90,7 @@ MSRA 实习主要渠道渠道:
 -----
 ## 微软小蜜
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/DoD8R900bWoxDBEMEzOibEg9dyPcAH0qm3dpRlxvkicZHUMSu6OuQFdJZL3IV4cNpRvuTlDqdtKDia0Wgqp4wTKWA/0?wx_fmt=gif&tp=webp)
+![](/assets/img/microsoft-internship/xiaomi.gif)
 
 微软首款小程序——智能图表识别工具
 
