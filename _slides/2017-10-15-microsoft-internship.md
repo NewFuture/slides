@@ -1,6 +1,6 @@
----
+  ---
 title: 微软实习总结
-description: my Internship in MicroSoft
+description: my Internship in Microsoft
 lang: zh
 transition: slide
 theme: black
@@ -19,8 +19,11 @@ redirect_from:
 ## 目录
 
 * 微软(中国)
+  * MSRA
+  * 亚太研发集团
 * 实习内容
-* 工作
+  * 微软小蜜
+  * 工程相关
 
 --------
 ## 微软(中国)两大核心
@@ -37,14 +40,17 @@ redirect_from:
 ## MSRA 实习
 
 MSRA 实习主要渠道渠道:
-* 不定期招聘 <http://www.msra.cn/zh-cn/jobs>
+* 不定期招聘: [www.msra.cn/zh-cn/jobs](http://www.msra.cn/zh-cn/jobs)
 * 联合培养博士生
 
-MSRA开放的实习岗位:
+*MSRA实习生一般由项目组自主招聘*
+
+~~
+### MSRA开放的实习岗位:
+
 * **研究类**
 * 开发类
 * 运营类
-
 
 ~~
 ### 微软亚太研发集团
@@ -54,11 +60,11 @@ MSRA开放的实习岗位:
 * **转正实习**(应届生): 每年3月份招聘
 * 预苗计划(非应届生): 无限制
  
-流程与互联网公司招聘流程基本一致
+一般由公司统一招聘,流程与互联网公司招聘流程基本一致
 
 
 ~~
-### 微软亚太研发集团院职位
+### 微软亚太研发集团岗位
 
 * 开发(Soft Engineer)
 * 算法(Scientist)
@@ -74,7 +80,7 @@ MSRA开放的实习岗位:
 * 时间: 4个月(3+1)
 
 ~~
-### 实现内容
+### 实习内容
 
 * 微软小蜜
 * 前端流程规范
@@ -82,9 +88,32 @@ MSRA开放的实习岗位:
 
 *部分内容细节不能公开*
 
+-----
+## 微软小蜜
+
+![](https://www.keke289.com/Uploads/upload/image/20170705/1499248998865301.jpg)
+
+智能图表识别工具
+
+将`图片`转成可编辑的PPT或表格
+
 ~~
-### 微软小蜜
+### 特性
 
-![](http://www.hishop.com.cn/uploads/allimg/170803/21669-1FP3142G4161.jpg)
+* 拍照转PPT
+* 电子表格识别
+* 文字编辑修改
 
-微软小蜜小程序
+*约12万用户*
+
+
+~~
+### 功能
+
+* 图片分类
+* 图片截取和摆正
+* 表格识别
+* 文字识别(OCR)
+* 文本框单元格还原
+* 文字擦除背景重绘
+
