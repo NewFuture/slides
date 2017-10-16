@@ -43,7 +43,7 @@ MSRA 实习主要渠道渠道:
 * 不定期招聘: [www.msra.cn/zh-cn/jobs](http://www.msra.cn/zh-cn/jobs)
 * 联合培养博士生
 
-*MSRA实习生一般由项目组自主招聘*
+<small>MSRA实习生一般由项目组自主招聘</small>
 
 ~~
 ### MSRA开放的实习岗位:
@@ -86,7 +86,7 @@ MSRA 实习主要渠道渠道:
 * 前端流程规范
 * 性能优化
 
-*部分内容细节不能公开*
+<small>部分内容细节不能公开</small>
 
 -----
 ## 微软小蜜
