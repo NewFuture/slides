@@ -1,4 +1,4 @@
-  ---
+---
 title: 微软实习总结
 description: my Internship in Microsoft
 lang: zh
