@@ -12,6 +12,9 @@ redirect_from:
   - "/microsoft-internship"
 ---
 
+<style> 
+section,p{height: 100%}
+</style>
 
 ![](https://www.cloudsec.com/wp-content/uploads/2016/06/Microsoft_cn.jpg)
 
@@ -68,7 +71,7 @@ MSRA 实习主要渠道渠道:
 
 * 开发(Soft Engineer)
 * 算法(Scientist)
-* 产品经理
+* 产品经理(PM)
 * 运营
 * 销售和技术支持
 
@@ -105,7 +108,7 @@ MSRA 实习主要渠道渠道:
 *约12万用户*
 
 ~~
-### 使用场景
+
 ![](/assets/img/microsoft-internship/xiaomi-example.jpg)
 
 ~~
@@ -118,7 +121,7 @@ MSRA 实习主要渠道渠道:
 * 文本框单元格还原
 * 文字擦除背景重绘
 
---
+----
 ## 找工作和实习
 
 * 简历
