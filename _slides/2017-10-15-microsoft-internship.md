@@ -12,10 +12,6 @@ redirect_from:
   - "/microsoft-internship"
 ---
 
-<style> 
-section,p{height: 100%}
-</style>
-
 ![](https://www.cloudsec.com/wp-content/uploads/2016/06/Microsoft_cn.jpg)
 
 -----
