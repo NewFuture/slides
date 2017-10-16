@@ -23,7 +23,7 @@ redirect_from:
   * 亚太研发集团
 * 实习内容
   * 微软小蜜
-  * 工程相关
+* 工作和实习准备
 
 --------
 ## 微软(中国)两大核心
@@ -91,11 +91,9 @@ MSRA 实习主要渠道渠道:
 -----
 ## 微软小蜜
 
-![](https://www.keke289.com/Uploads/upload/image/20170705/1499248998865301.jpg)
+![](https://mmbiz.qpic.cn/mmbiz_gif/DoD8R900bWoxDBEMEzOibEg9dyPcAH0qm3dpRlxvkicZHUMSu6OuQFdJZL3IV4cNpRvuTlDqdtKDia0Wgqp4wTKWA/0?wx_fmt=gif&tp=webp)
 
-智能图表识别工具
-
-将`图片`转成可编辑的PPT或表格
+微软首款小程序——智能图表识别工具
 
 ~~
 ### 特性
@@ -106,6 +104,9 @@ MSRA 实习主要渠道渠道:
 
 *约12万用户*
 
+~~
+### 使用场景
+![](/assets/img/microsoft-internship/xiaomi-example.jpg)
 
 ~~
 ### 功能
@@ -117,3 +118,14 @@ MSRA 实习主要渠道渠道:
 * 文本框单元格还原
 * 文字擦除背景重绘
 
+--
+## 找工作和实习
+
+* 简历
+  * 项目整理
+  * 书面简历
+  * 口头简历(自我表达)
+* 系统复习
+  * 基础知识(数据结构,算法,网络,数据库,语言等)
+  * 刷题提供反应速度
+* 积累经验 
