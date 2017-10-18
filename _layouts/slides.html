@@ -9,8 +9,8 @@ layout: compress
   <title>{{ page.title }} | {{ page.permalink | default: page.url | remove: '/' | replace: '-',' ' | capitalize }}</title>
 
   <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
-  <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: site.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
   <link href="{{ site.baseurl }}/assets/css/slide.css" rel="stylesheet">
+  <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.description %}
   <meta name="description" content="{{ page.description }}"/>
