@@ -1,8 +1,6 @@
+@import "slide";
 $svg-back-color: #fff;
 $qrcode-color: #008;
-.reveal p {
-  height: fit-content;
-}
 
 code.highlighter-rouge {
   font-family: Consolas,Monaco !important;
@@ -29,7 +27,6 @@ kbd {
   text-shadow: 0 1px 0 #fff;
 }
 
-
 .left {
   text-align: left;
 
@@ -52,33 +49,6 @@ kbd {
 
 .no-li-style li {
   list-style: none;
-}
-
-.slides {
-  .author {
-    color: gray;
-  }
-
-  .qrcode {
-    margin: auto;
-
-    img,
-    svg {
-      width: 180px;
-      height: 180px;
-      border: 10px $svg-back-color solid;
-      border-radius: 8%;
-      background: $svg-back-color;
-      margin: 10px auto;
-    }
-    // path{
-    //     fill: $qrcode-color;
-    // }
-  }
-
-  .end {
-    font-size: 90%;
-  }
 }
 
 .links {
