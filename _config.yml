@@ -6,6 +6,7 @@ url:                  "https://deck.newfuture.cc"
 
 # reveal options
 reveal:
+  slide_separator:    ""
   slide_separator:    "<hr />"
   vertical_separator: "<p>~~</p>"
   notes_separator:    "<p>Notes:</p>"
