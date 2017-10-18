@@ -10,7 +10,7 @@
     <p>{{ page.description }}</p>
   {% endif %}
   <div>
-    <small><a href="{{ page.url | prepend: site.baseurl }}">{{ page_url | remove: "http://" }}</a></small>    
+    <small><a href="{{ page.url | prepend: site.baseurl }}">{{ page_url | remove: "http://" | remove: "https://" }}</a></small>    
   </div>
   <small><a class="author" href="{{  page.author_link |site.author.url }}">@{{ page.author | default: site.author.name }}</a></small>  
 </section>
