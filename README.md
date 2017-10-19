@@ -3,7 +3,7 @@
 * [x] gh-page compatible
 * [x] Travis build
 * [x] Last Page
-* [ ] Image Replace
+* [x] Qrcode Replace
 * [ ] Tags
 * [x] better home page
 
