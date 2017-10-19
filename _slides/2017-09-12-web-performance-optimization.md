@@ -6,6 +6,7 @@ transition: slide
 theme: black
 width: 1280
 height: 720
+tags: ["web", "performance"]
 redirect_from:
   - "/前Web性能优化端简史/"
   - "/Web性能优化"  
