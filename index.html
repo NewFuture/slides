@@ -5,9 +5,11 @@ title:
 
 <div class="posts">
   {% for deck in site.slides reversed %}
+  {% unless deck.private %}
   <section class="list">
     <h3 class="link-title"><a href="{{ site.baseurl }}{{ deck.url }}">{{ deck.title }}</a></h3>
     <span class="desc">{{ deck.description }}</span>
   </section>
+  {% endunless %}
   {% endfor %}
 </div>

@@ -1,5 +1,6 @@
 ---
 title: 微软实习总结
+private: true
 description: My Internship in Microsoft
 lang: zh
 width: 1280
