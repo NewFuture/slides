@@ -4,13 +4,13 @@
   <h2><strong>THANKS</strong></h2>
   <h4><small>{{ page.title }}</small></h4>   
   <p>
-    <small>CODE: <a href="{{ page.path | prepend: site.github.src }}">{{ site.github.url }}</a></small><br/>
+    <small>CODE: <a href="{{ site.github.url }}/blob/{{ site.github.branch | default: 'gh-pages' }}/{{ page.path }}">{{ site.github.url }}</a></small><br/>
     <small>LINK: <a href="{{ page.url | prepend: site.baseurl }}">{{ page_url }}</a></small>
   </p>
   <footer class="links">
     <a class="link" href="{{ site.url | append: site.baseurl }}">Home(主页)</a>
     <a class="link" href="#/">Replay(重放)</a>
-    <a class="link" target="_blank" href="{{ page.path | prepend: site.github.edit }}">Edit(修改)</a>
+    <a class="link" target="_blank" href="{{ site.github.url }}/edit/{{ site.github.branch | default: 'gh-pages' }}/{{ page.path }}">Edit(修改)</a>
     <a class="link desktop-chrome" href="?print-pdf">Print(打印)</a>
   </footer>
 </section>

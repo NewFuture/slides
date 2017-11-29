@@ -19,10 +19,9 @@ reveal:
   qrcode:             "https://api.qrserver.com/v1/create-qr-code/?size=100x100&format=svg&data="
 
 github:
-  url: https://github.com/NewFuture/slides/
-  src: https://github.com/NewFuture/slides/blob/edit/
-  edit: https://github.com/NewFuture/slides/edit/edit/
-
+  url: https://github.com/NewFuture/slides
+  branch: gh-pages
+  
 markdown:             kramdown
 kramdown:
   input:              GFM
