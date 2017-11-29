@@ -8,21 +8,24 @@ layout: compress
 
   <title>{{ page.title }} | {{ page.permalink | default: page.url | remove: '/' | replace: '-',' ' | capitalize }}</title>
 
+  <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
+  <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: site.reveal.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/css/slide.css" rel="stylesheet">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.description %}
   <meta name="description" content="{{ page.description }}"/>
   {% endif %}
   <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-  <meta name="HandheldFriendly" content="true"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <link href="{{ site.reveal.cdn }}css/reveal.min.css" rel="stylesheet">
-  <link href="{{ site.baseurl }}/assets/css/slide.css" rel="stylesheet">
-  <link href="{{ site.reveal.cdn }}css/theme/{{ page.theme | default: 'black' }}.min.css" id="theme" rel="stylesheet">
-
-{% comment %}
-  <link rel="stylesheet" href="{{ "css/print/pdf.min.css" | prepend: site.reveal.cdn }}" media="print"/>   
-{% endcomment %}
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <meta name="screen-orientation" content="landscape">
+  <meta name="x5-orientation" content="landscape">
+  <meta name="x5-page-mode" content="app">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="HandheldFriendly" content="true">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 </head>
 
@@ -36,7 +39,7 @@ layout: compress
           {% if site.safe %}
             {% include title-slide.safe.html %}
           {% else %}
-            {% include title-slide.html %}        
+            {% include title-slide.html %}
           {% endif %}
         {% endif %}
 
@@ -100,8 +103,8 @@ layout: compress
         {% endif %}
       </div>
     </main>
-    <script src="{{ "lib/js/head.min.js" | prepend: site.reveal.cdn }}"></script>
-    <script src="{{ "js/reveal.min.js" | prepend: site.reveal.cdn }}"></script>
+    <script src="{{ 'lib/js/head.min.js' | prepend: site.reveal.cdn }}"></script>
+    <script src="{{ 'js/reveal.min.js' | prepend: site.reveal.cdn }}"></script>
     <script>{% include slide.js %}</script>
 </body>
 </html>

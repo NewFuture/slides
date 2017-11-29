@@ -45,7 +45,7 @@ CSS 不是**编程**语言
 
 Ruby 实现的CSS预处理器
 
-![](http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg){: height="250px" .no-border .transparent}
+![](http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg){: height="250" .no-border .transparent}
 
 最成熟、最稳定、最强大的CSS扩展语言
 
