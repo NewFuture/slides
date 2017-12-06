@@ -3,6 +3,7 @@ title: 表格识别还原
 private: true
 description: Form Table Recognition in Images
 lang: zh
+width: 1280
 redirect_from:
   - "/表格识别还原/"
   - "/表格识别还原"  
@@ -99,12 +100,33 @@ redirect_from:
 1. 训练CNN网络 
     1. 裁剪后图片作为输入
     1. 变换矩阵作为输出
+1. 验证
 
 ---------
 ## Thin-Plate Spline
 
-对齐两张图片
+ 薄板样条2D插值
+![](http://images.cnblogs.com/cnblogs_com/xiaotie/tps00.jpg)
 
-<http://user.engineering.uiowa.edu/~aip/papers/bookstein-89.pdf>
+用于图片匹配(如全景图)
 
+~~
+### TPS 操作
 
+<svg id="kity_svg_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="470" height="141" viewBox="0 0 470 141"><defs id="kity_defs_7"><linearGradient id="kity_linearGradient_17" x1="0" y1="0" x2="0" y2="1"><stop id="kity_stop_18" offset="0" stop-color="rgb(255, 255, 255)"></stop><stop id="kity_stop_19" offset="1" stop-color="rgb(204, 204, 204)"></stop></linearGradient><marker id="kity_marker_2" orient="auto" refX="6" refY="0" viewBox="-7 -7 14 14" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse"><path id="kity_path_3" fill="white" stroke="none" d="M6,0A6,6,0,1,1,-6,0A6,6,0,1,1,6,0"></path></marker></defs><g id="kity_g_8"><g id="minder1" text-rendering="optimize-speed"><g id="minder_connect_group1"><path id="kity_path_31" fill="none" stroke="white" stroke-width="3" d="M66.5,68.5A114,34,0,0,1,180.5,34.5"></path><path id="kity_path_39" fill="none" stroke="white" stroke-width="3" d="M66.5,68.5A114,34,0,0,0,180.5,102.5"></path><path id="kity_path_47" fill="none" stroke="white" stroke-width="2" d="M321,103C351,103,351,103,381,103"></path></g><g id="minder_node1"><path id="kity_path_57" fill="rgba(0, 0, 0, .25)" stroke="none" d="M29.5,46.5h82a5,5,0,0,1,5,5v44a5,5,0,0,1,-5,5h-82a5,5,0,0,1,-5,-5v-44a5,5,0,0,1,5,-5z"></path><path id="node_outline1" fill="#e9df98" stroke="#e9df98" d="M25.5,41.5h82a5,5,0,0,1,5,5v44a5,5,0,0,1,-5,5h-82a5,5,0,0,1,-5,-5v-44a5,5,0,0,1,5,-5z" stroke-width="3"></path><g id="node_text1" fill="#430"><text id="kity_text_22" text-rendering="inherit" font-size="24" dy=".8em" y="52.90000009536743" x="45.5">TPS</text></g></g><g id="kity_g_12"><path id="kity_path_13" fill="none" stroke="none" d="M45.5,68.5h0v0h0z"></path></g><g id="kity_g_14"><path id="kity_path_15" fill="none" stroke="none" d="M45.5,68.5h0v0h0z"></path><path id="kity_path_16" fill="none" stroke="none"></path></g><g id="minder_node2"><path id="kity_path_54" fill="rgba(0, 0, 0, .25)" stroke="none" d="M191.5,25.5h111a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-111a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z"></path><g id="node_expander1" style="cursor: pointer;" display="none"><path id="kity_path_36" fill="white" stroke="gray" d="M182.5,34.5A6,6,0,1,1,170.5,34.5A6,6,0,1,1,182.5,34.5"></path><path id="kity_path_37" fill="none" stroke="gray"></path></g><path id="node_outline2" fill="#a4c5c0" stroke="#a4c5c0" d="M187.5,20.5h111a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-111a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z" stroke-width="1"></path><g id="node_text2" fill="#333"><text id="kity_text_33" text-rendering="inherit" font-size="16" dy=".8em" y="24.09999990463257" x="202.5">对应特征点</text></g></g><g id="minder_node3"><path id="kity_path_56" fill="rgba(0, 0, 0, .25)" stroke="none" d="M191.5,93.5h128a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-128a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z"></path><g id="node_expander2" style="cursor: pointer;"><path id="kity_path_44" fill="white" stroke="gray" d="M182.5,102.5A6,6,0,1,1,170.5,102.5A6,6,0,1,1,182.5,102.5"></path><path id="kity_path_45" fill="none" stroke="gray" d="M172,102.5L181,102.5"></path></g><path id="node_outline3" fill="#a4c5c0" stroke="#a4c5c0" d="M187.5,88.5h128a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-128a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z" stroke-width="1"></path><g id="node_text3" fill="#333"><text id="kity_text_41" text-rendering="inherit" font-size="16" dy=".8em" y="92.09999990463257" x="202.5">确定插值函数</text></g></g><g id="minder_node4"><path id="kity_path_55" fill="rgba(0, 0, 0, .25)" stroke="none" d="M421.5,74h0a34,34,0,0,1,34,34v0a34,34,0,0,1,-34,34h0a34,34,0,0,1,-34,-34v0a34,34,0,0,1,34,-34z" display="none"></path><g id="node_expander3" style="cursor: pointer;" display="none"><path id="kity_path_52" fill="white" stroke="gray" d="M380.5,102.5A6,6,0,1,1,368.5,102.5A6,6,0,1,1,380.5,102.5"></path><path id="kity_path_53" fill="none" stroke="gray"></path></g><path id="node_outline4" fill="white" stroke="white" d="M385.5,91.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path><g id="node_text4" fill="black"><text id="kity_text_49" text-rendering="inherit" font-size="12" dy=".8em" y="94.70000004768372" x="390.5">插值变换</text></g></g></g></g></svg>
+
+~~
+### 空间网络变换(STN)
+
+![](https://raw.githubusercontent.com/warbean/tps_stn_pytorch/master/demo/ocr.jpg)
+
+空间变换(人脸识别)
+
+----
+## 计划
+1. 复现标准表格连通区处理
+1. 传统视觉变换和还原
+1. 构建CNN网络
+1. 批量生成透视变换图片和矩阵,训练网络
+1. 验证第二个问题
+1. 尝试STN解决第三类问题
