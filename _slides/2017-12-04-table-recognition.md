@@ -70,6 +70,7 @@ redirect_from:
 
 ![](/img/table-recognition/demo_table.jpg) 
 
+~~
 #### 处理效果(还原结果)
 ![](/img/table-recognition/demo_result.jpg)
 
