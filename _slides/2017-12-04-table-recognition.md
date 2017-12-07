@@ -107,7 +107,8 @@ redirect_from:
 ---------
 ### 3. Thin-Plate Spline
 
- 薄板样条2D插值
+薄板样条2D插值
+
 ![](http://images.cnblogs.com/cnblogs_com/xiaotie/tps00.jpg)
 
 用于图片匹配(如全景图)
