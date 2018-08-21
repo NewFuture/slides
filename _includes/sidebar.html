@@ -22,9 +22,16 @@
       {% endif %} 
     {% endfor %}
   </nav>
+  
   {% if site.github and site.github.url %}
   <div class="sidebar-item">
-    <a href="{{ site.github.url }}">Github</a>
+    <a href="{{ site.github.url }}">Source</a>
+  </div>
+  {% endif %}
+  
+  {% if site.github and site.github.home %}
+  <div class="sidebar-item">
+    <a href="{{ site.github.home }}">GitHub</a>
   </div>
   {% endif %}
   <div class="sidebar-item">

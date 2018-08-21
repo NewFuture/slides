@@ -1,7 +1,7 @@
 # Setup
 title:                "Future Slides"
 tagline:              "未来的幻灯片集"
-description:          "Slide decks New Future wrote"
+description:          "Slides New Future wrote"
 url:                  "https://slides.newfuture.cc"
 
 # reveal options
@@ -20,6 +20,7 @@ reveal:
 
 github:
   url: https://github.com/NewFuture/slides
+  home: https://github.com/NewFuture
   branch: gh-pages
   
 markdown:             kramdown
@@ -33,8 +34,8 @@ collections:
 
 # About/contact
 author:
-  name:               NewFuture
-  url:                https://github.com/NewFuture
+  name:               New Future
+  url:                https://newfuture.cc
   email:              github@newfuture.cc
 
 # YAML defaults
