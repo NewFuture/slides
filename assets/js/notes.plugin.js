@@ -12,7 +12,7 @@
 var RevealNotes = (function() {
 
 	function openNotes( notesFilePath ) {
-        notesFilePath = notesFilePath || "https://deck.newfuture.cc/notes.html";
+        notesFilePath = notesFilePath || "https://slides.newfuture.cc/notes.html";
 
 		var notesPopup = window.open( notesFilePath, 'reveal.js - Notes', 'width=1100,height=700' );
 
