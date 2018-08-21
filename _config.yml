@@ -60,5 +60,6 @@ sass:
   sass_dir: _sass
 
 #插件
+plugins_dir: ./_plugins
 plugins:
   - jekyll-redirect-from
