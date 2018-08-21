@@ -1,5 +1,5 @@
 ---
-title: 前后端分离计划
+title: HTML和CSS教程大纲
 private: false
 description: Outline of HTML and CSS Tutorial 
 lang: zh
@@ -9,6 +9,7 @@ redirect_from:
   - "/HTML和CSS教程大纲"
   - "/html-css-turorial-outline"
 ---
+
 
 ## 目录
 
