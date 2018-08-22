@@ -59,13 +59,13 @@ HTML4 Mode
 
 ## Intro to HTML and CSS
 
-* Brief History
-* Setup CSS
-* Priority
+* 演变历史
+* 如何使用CSS
+* 优先级
 
 ~~
 
-### Brief History of CSS
+### stage of CSS
 
 * inline attribute (`font`,`color`)
 * CSS 样式分离
@@ -76,18 +76,23 @@ HTML4 Mode
 
 * Inline Styles
 ```html
-<span style="color: red;">red text</span>
+<i style="color: red;">red text</i>
 ```
 * Style Tag in HTML
 ```html
   <style>
-    color {color: red;}
+    i {color: red;}
   </style>
 ```
-* link CSS file
+* link CSS file(外联)
+
 ```html
 <link href="style.css" type="text/css" rel="stylesheet">
 ```
 
+~~
 
+### Priority
 
+* inline > Style/外联
+* !important > normal
