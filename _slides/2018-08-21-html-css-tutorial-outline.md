@@ -25,6 +25,20 @@ redirect_from:
 
 [![](https://blog.newfuture.cc/assets/img/html-intro/html.png)](https://blog.newfuture.cc/html-intro/#mind-mapping-overview)
 
+~~
+
+### HTML5
+
+HTML5 Mode
+```html
+<!DOCTYPE html>
+```
+
+HTML4 Mode
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+```
+
 ---
 
 ## CSS Main Point
@@ -48,5 +62,31 @@ redirect_from:
 * Brief History
 * Setup CSS
 * Priority
+
+~~
+
+### Brief History of CSS
+
+
+
+~~
+### How to Setup CSS
+
+* Inline Styles
+```html
+<span style="color: red;">red text</span>
+```
+* Style Tag in HTML
+```html
+  <style>
+    color {
+      color: red;
+    }
+  </style>
+```
+* link CSS file
+```html
+<link href="style.css" type="text/css" rel="stylesheet">
+```
 
 
