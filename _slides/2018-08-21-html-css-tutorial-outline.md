@@ -95,4 +95,5 @@ HTML4 Mode
 ### Priority
 
 * inline > Style/外联
-* !important > normal
+* `!important` > `normal`
+* 子选择器 > 父选择器
