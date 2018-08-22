@@ -67,7 +67,9 @@ HTML4 Mode
 
 ### Brief History of CSS
 
-
+* inline attribute (`font`,`color`)
+* CSS 样式分离
+* CSS3 布局和动画
 
 ~~
 ### How to Setup CSS
@@ -79,14 +81,13 @@ HTML4 Mode
 * Style Tag in HTML
 ```html
   <style>
-    color {
-      color: red;
-    }
+    color {color: red;}
   </style>
 ```
 * link CSS file
 ```html
 <link href="style.css" type="text/css" rel="stylesheet">
 ```
+
 
 
