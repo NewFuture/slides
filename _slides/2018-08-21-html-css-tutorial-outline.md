@@ -23,17 +23,23 @@ redirect_from:
 
 ## HTML Main Point
 
-
+[![](https://blog.newfuture.cc/assets/img/html-intro/html.png)](https://blog.newfuture.cc/html-intro/#mind-mapping-overview)
 
 ---
 
 ## CSS Main Point
-
+[![](https://blog.newfuture.cc/assets/img/css-intro/css.png)](https://blog.newfuture.cc/css-intro/#mind-mapping-overview)
 
 ---
 
 ## Plan and Overview
 
+1. CSS和HTML基础常识
+2. CSS盒子模型
+3. CSS布局和框架
+4. CSS文本和颜色
+5. CSS表和列表样式
+6. 适配和多设备支持
 
 ---
 
